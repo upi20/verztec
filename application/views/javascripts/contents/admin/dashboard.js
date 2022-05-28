@@ -1,4 +1,11 @@
 $(document).ready(() => {
+    $(".date-filter").datepicker({
+        format: "mm-yyyy",
+        startView: "months",
+        minViewMode: "months"
+    });
+
+
     var ticksStyle = {
         fontColor: '#495057',
         fontStyle: 'bold'

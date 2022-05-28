@@ -1,5 +1,18 @@
+<div class="d-md-flex flex-row justify-content-end  align-items-center mb-3">
+    <label for="from" class="mb-md-0">From</label>
+    <div class="form-group mb-md-0">
+        <input type="text" class="form-control date-filter" name="from" id="from" value="06/2022" placeholder="" />
+    </div>
+    <label for="to" class="mb-md-0 ml-md-3">To</label>
+    <div class="form-group mb-md-0">
+        <input type="text" class="form-control date-filter" name="to" id="to" value="12/2022" placeholder="" />
+    </div>
+    <div>
+        <button type="button" class="btn btn-info btn no-wrap  ml-md-3"><i class="fas fa-search"></i> Search</button>
+    </div>
+</div>
 <div class="row">
-    <div class="col-lg-3 col-6">
+    <div class="col-md-3 col-sm-12">
         <!-- small box -->
         <div class="small-box bg-info">
             <div class="inner">
@@ -14,7 +27,7 @@
         </div>
     </div>
     <!-- ./col -->
-    <div class="col-lg-3 col-6">
+    <div class="col-md-3 col-sm-12">
         <!-- small box -->
         <div class="small-box bg-success">
             <div class="inner">

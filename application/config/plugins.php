@@ -109,3 +109,12 @@ $config['chartjs'] = [
 		'assets/plugins/chartjs/Chart.js'
 	]
 ];
+
+$config['datepicker'] = [
+	'styles' => [
+		'assets/plugins/datepicker/css/bootstrap-datepicker.min.css'
+	],
+	'scripts' => [
+		'assets/plugins/datepicker/js/bootstrap-datepicker.min.js'
+	]
+];

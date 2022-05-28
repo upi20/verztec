@@ -55,7 +55,7 @@ $(document).ready(function () {
                 },
                 success: function (response) {
                     console.log(response)
-                    if(response.recaptcha == 1){
+                    if (response.recaptcha == 1) {
                         // setToast({ title: "Recaptcha Berhasil", body: response.message, class: "bg-primary" });
                         if (response.status == 1) {
                             setToast({ title: "Gagal", body: "Maaf. Password yang anda masukan salah.", class: "bg-warning" });
@@ -81,11 +81,11 @@ $(document).ready(function () {
                             window.location.href = base_url + 'login';
                         } else if (response.status == 0) {
                             setToast({ title: "Berhasil", body: "Login Sukses", class: "bg-primary" });
-                            window.location.href = base_url + 'dashboard';
+                            window.location.href = base_url + '/admin/dashboard';
                         } else {
                             setToast({ title: "Gagal", body: "Koneksi buruk.", class: "bg-warning" });
                         }
-                    }else{
+                    } else {
                         setToast({ title: "Recaptcha Gagal", body: response.message, class: "bg-warning" });
                     }
 

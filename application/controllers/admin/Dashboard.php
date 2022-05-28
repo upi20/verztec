@@ -11,7 +11,7 @@ class Dashboard extends Render_Controller
         $this->title = "Dashboard";
         $this->content = 'admin/dashboard';
         $this->navigation = ['Dashboard'];
-        $this->plugins = ['chartjs'];
+        $this->plugins = ['chartjs', 'datepicker'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';

@@ -50,36 +50,36 @@ endif;
 
 <div class="row">
   <div class="col-md-2 col-sm-6 col-12">
-    <a href="<?=base_url()?>pengaturan/profile?level=125" style="color: black;">
+    <a href="<?= base_url() ?>pengaturan/profile?level=125" style="color: black;">
       <div class="info-box">
         <span class="info-box-icon bg-info"><i class="far fa-star"></i></span>
         <div class="info-box-content">
           <span class="info-box-text">LEVEL [Partner L1]</span>
-          <span class="info-box-number"><?=$level_partner_level_1?></span>
+          <span class="info-box-number"><?= $level_partner_level_1 ?></span>
         </div>
       </div>
     </a>
   </div>
 
   <div class="col-md-2 col-sm-6 col-12">
-    <a href="<?=base_url()?>pengaturan/profile?level=126" style="color: black;">
+    <a href="<?= base_url() ?>pengaturan/profile?level=126" style="color: black;">
       <div class="info-box">
         <span class="info-box-icon bg-info"><i class="far fa-star"></i></span>
         <div class="info-box-content">
           <span class="info-box-text">LEVEL [Partner L2]</span>
-          <span class="info-box-number"><?=$level_partner_level_2?></span>
+          <span class="info-box-number"><?= $level_partner_level_2 ?></span>
         </div>
       </div>
     </a>
   </div>
 
   <div class="col-md-2 col-sm-6 col-12">
-    <a href="<?=base_url()?>pengaturan/profile?level=123" style="color: black;">
+    <a href="<?= base_url() ?>pengaturan/profile?level=123" style="color: black;">
       <div class="info-box">
         <span class="info-box-icon bg-info"><i class="far fa-star"></i></span>
         <div class="info-box-content">
           <span class="info-box-text">LEVEL [Reader]</span>
-          <span class="info-box-number"><?=$level_partner_level_reader?></span>
+          <span class="info-box-number"><?= $level_partner_level_reader ?></span>
         </div>
       </div>
     </a>
@@ -89,31 +89,31 @@ endif;
     <div class="info-box">
       <span class="info-box-icon bg-info"><i class="far fa-star"></i></span>
       <div class="info-box-content">
-        <span class="info-box-text"><?=$membership_alias?> [BOD]</span>
-        <span class="info-box-number"><?=$membership?></span>
+        <span class="info-box-text"><?= $membership_alias ?> [BOD]</span>
+        <span class="info-box-number"><?= $membership ?></span>
       </div>
     </div>
   </div>
 
   <div class="col-md-2 col-sm-6 col-12">
-    <a href="<?=base_url()?>pengaturan/profile?jk=1" style="color: black;">
+    <a href="<?= base_url() ?>pengaturan/profile?jk=1" style="color: black;">
       <div class="info-box">
         <span class="info-box-icon bg-info"><i class="far fa-star"></i></span>
         <div class="info-box-content">
           <span class="info-box-text">Laki-laki</span>
-          <span class="info-box-number"><?=$pria?></span>
+          <span class="info-box-number"><?= $pria ?></span>
         </div>
       </div>
     </a>
   </div>
 
   <div class="col-md-2 col-sm-6 col-12">
-    <a href="<?=base_url()?>pengaturan/profile?jk=2" style="color: black;">
+    <a href="<?= base_url() ?>pengaturan/profile?jk=2" style="color: black;">
       <div class="info-box">
         <span class="info-box-icon bg-info"><i class="far fa-star"></i></span>
         <div class="info-box-content">
           <span class="info-box-text">Perempuan</span>
-          <span class="info-box-number"><?=$wanita?></span>
+          <span class="info-box-number"><?= $wanita ?></span>
         </div>
       </div>
     </a>
@@ -137,9 +137,9 @@ endif;
     </div>
   </div>
   <!-- /.card-header -->
-  <input type="hidden" value="<?=$membership_alias?>" id="alias_name_membership">
-  <input type="hidden" value="<?=$partner_alias?>" id="isi-partner">
-  <input type="hidden" value="<?=$kategori_keanggotaan_alias?>" id="isi-kategori-keanggotaan">
+  <input type="hidden" value="<?= $membership_alias ?>" id="alias_name_membership">
+  <input type="hidden" value="<?= $partner_alias ?>" id="isi-partner">
+  <input type="hidden" value="<?= $kategori_keanggotaan_alias ?>" id="isi-kategori-keanggotaan">
   <div class="card-body">
     <table id="dt_basic_v2" class="table table-bordered table-striped table-hover">
       <thead>
@@ -148,9 +148,9 @@ endif;
           <th class="text-center align-middle" rowspan='1' colspan='1'>Tanggal Daftar</th>
           <!-- <th class="text-center align-middle" rowspan='1' colspan='1'>Kode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> -->
           <th class="text-center align-middle" rowspan='1' colspan='1'>Level</th>
-          <th class="text-center align-middle" rowspan='1' colspan='1'><?=$partner_alias?></th>
+          <th class="text-center align-middle" rowspan='1' colspan='1'><?= $partner_alias ?></th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>Posisi</th>
-          <th class="text-center align-middle" rowspan='1' colspan='1'><?=$kategori_keanggotaan_alias?></th>
+          <th class="text-center align-middle" rowspan='1' colspan='1'><?= $kategori_keanggotaan_alias ?></th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>NIK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>Email</th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>Nama Lengkap</th>
@@ -160,18 +160,18 @@ endif;
           <th class="text-center align-middle" rowspan='1' colspan='1'>Tanggal Lahir</th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>Tanggal Meninggal</th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>Foto</th>
-          <th class="text-center align-middle" rowspan='1' colspan='1'><?=$membership_alias?></th>
-          <th class="text-center align-middle" rowspan='1' colspan='1'><?=$data_formal_alias?></th>
+          <th class="text-center align-middle" rowspan='1' colspan='1'><?= $membership_alias ?></th>
+          <th class="text-center align-middle" rowspan='1' colspan='1'><?= $data_formal_alias ?></th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>Kontak</th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>Alamat</th>
           <th class="text-center align-middle" rowspan='1' colspan='1'>Pendidikan</th>
-          <th class="text-center align-middle" rowspan='1' colspan='1'><?=$kategorial_alias?></th>
-          <th class="text-center align-middle" rowspan='1' colspan='1'><?=$wilayah_alias?></th>
+          <th class="text-center align-middle" rowspan='1' colspan='1'><?= $kategorial_alias ?></th>
+          <th class="text-center align-middle" rowspan='1' colspan='1'><?= $wilayah_alias ?></th>
         </tr>
       </thead>
     </table>
     <hr>
-    <a style="float: right;" type="button" class="btn btn-primary btn-sm" href="<?=base_url()?>activity/logging?menu=<?=$this->modul?>"><i class="fa fa-search"></i> &nbsp; Log Aktifitas</a>
+    <a style="float: right;" type="button" class="btn btn-primary btn-sm" href="<?= base_url() ?>activity/logging?menu=<?= $this->modul ?>"><i class="fa fa-search"></i> &nbsp; Log Aktifitas</a>
   </div>
   <!-- /.card-body -->
 </div>
@@ -264,7 +264,7 @@ endif;
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-center"><?=$data_formal_alias?></h5>
+        <h5 class="modal-title text-center"><?= $data_formal_alias ?></h5>
       </div>
       <div class="modal-body">
         <table id="" class="table table-bordered table-striped table-hover">
@@ -280,13 +280,13 @@ endif;
     </div>
   </div>
 </div>
-  
+
 <!-- kategorial -->
 <div class="modal fade" id="kategorial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-center"><?=$kategorial_alias?></h5>
+        <h5 class="modal-title text-center"><?= $kategorial_alias ?></h5>
       </div>
       <div class="modal-body">
         <table id="" class="table table-bordered table-striped table-hover">
@@ -308,7 +308,7 @@ endif;
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-center"><?=$wilayah_alias?></h5>
+        <h5 class="modal-title text-center"><?= $wilayah_alias ?></h5>
       </div>
       <div class="modal-body">
         <table id="" class="table table-bordered table-striped table-hover">
@@ -352,7 +352,7 @@ endif;
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-center"><?=$membership_alias?></h5>
+        <h5 class="modal-title text-center"><?= $membership_alias ?></h5>
       </div>
       <div class="modal-body">
         <table id="" class="table table-bordered table-striped table-hover">

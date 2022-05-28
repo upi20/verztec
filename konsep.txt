@@ -85,6 +85,9 @@ Transaction
     Status
 
 
+Member
+
+Create User Role
 
 Revisi
     Type
@@ -96,7 +99,7 @@ Revisi
     Viewer
     Save
 
-    Menu paket ( Memntukan batas individu per organisasi )
+    // =================== per module
     filter
     summery
 
@@ -106,12 +109,10 @@ Revisi
         Paket
         Total Member
         
-
-
     Buat data faker minimal 10 record
     
 
-Pricing
+Pricing [done]
     Title
     Description
     Price
