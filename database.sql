@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Waktu pembuatan: 27 Bulan Mei 2022 pada 01.32
--- Versi server: 10.4.21-MariaDB
--- Versi PHP: 7.4.29
+-- Host: 127.0.0.1
+-- Generation Time: May 28, 2022 at 07:37 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `activity`
+-- Table structure for table `activity`
 --
 
 CREATE TABLE `activity` (
@@ -42,7 +42,7 @@ CREATE TABLE `activity` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `activity_log`
+-- Table structure for table `activity_log`
 --
 
 CREATE TABLE `activity_log` (
@@ -56,7 +56,7 @@ CREATE TABLE `activity_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `activity_log`
+-- Dumping data for table `activity_log`
 --
 
 INSERT INTO `activity_log` (`id`, `modul`, `by`, `data_baru`, `data_lama`, `jenis_perubahan`, `created_at`) VALUES
@@ -638,12 +638,58 @@ INSERT INTO `activity_log` (`id`, `modul`, `by`, `data_baru`, `data_lama`, `jeni
 (574, 'Data Member', 273, 'Menambah data baru dengan isi id = 236, level = Reader, nik = 030401-202205-0013, partner = Keluarga Hendro, user_nama = Opusisv, user_email = siti@mailinator.com, user_email_status = 0, user_phone = 0, user_status = Aktif', 'Belum ada data', 1, '2022-05-26 17:44:22'),
 (575, 'Data Member', 273, 'Mengubah isi data sebelumnya menjadi id = 52, nama_depan = Opusisv, nama_belakang = Siti, jenis_kelamin = 2, status = Aktif, photo = ', 'Isi data sebelumnya adalah id = 52, nama_depan = , nama_belakang = , jenis_kelamin = Tidak Diketahui, status = Aktif, photo = ', 2, '2022-05-26 17:44:22'),
 (576, 'Data Member', 273, 'Menambah data baru dengan isi profile = Opusisv Siti, peristiwa_formal = Pernikahan, keterangan = Pernikahan Agustus, tempat = Jakarta, tanggal_data_formal = 2021-08-10, status = Tidak Aktif', 'Belum ada data', 1, '2022-05-26 17:45:45'),
-(577, 'Data Member', 273, 'Menambah data baru dengan isi profile = Opusisv Siti, peristiwa_formal = Tanggal Lahir, keterangan = akte kelahiran, tempat = bandung, tanggal_data_formal = 2022-01-01, status = Tidak Aktif', 'Belum ada data', 1, '2022-05-26 17:48:33');
+(577, 'Data Member', 273, 'Menambah data baru dengan isi profile = Opusisv Siti, peristiwa_formal = Tanggal Lahir, keterangan = akte kelahiran, tempat = bandung, tanggal_data_formal = 2022-01-01, status = Tidak Aktif', 'Belum ada data', 1, '2022-05-26 17:48:33'),
+(578, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent = Dashboard, menu_nama = Dashboard, menu_index = 1, menu_icon = far fa-circle, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = Dashboard, menu_nama = Dashboard, menu_index = 1, menu_icon = far fa-circle, menu_url = dashboard, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 13:10:29'),
+(579, '', 1, 'Menghapus data lama', 'Isi data sebelumnya adalah menu = Dashboard, level = Super Admin', 3, '2022-05-28 13:41:10'),
+(580, '', 1, 'Menambah data baru dengan isi menu = Dashboard, level = Super Admin', 'Belum ada data', 1, '2022-05-28 13:41:13'),
+(581, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent =  , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = dashboard, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 13:41:38'),
+(582, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent =  , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 13:41:50'),
+(583, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent =  , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 13:41:55'),
+(584, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent =  , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 13:42:06'),
+(585, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent =  , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 13:42:14'),
+(586, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent = Dashboard, menu_nama = Dashboard, menu_index = 1, menu_icon = far fa-circle, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = Dashboard, menu_nama = Dashboard, menu_index = 1, menu_icon = far fa-circle, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 13:42:16'),
+(587, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent =  , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Dashboard, menu_index = 1, menu_icon = fa fa-suitcase, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 13:42:55'),
+(588, 'Menu', 1, 'Menghapus data lama', 'Isi data sebelumnya adalah parent = Dashboard, menu_nama = Dashboard, menu_index = 1, menu_icon = far fa-circle, menu_url = admin/dashboard, menu_keterangan = -, menu_status = Aktif', 3, '2022-05-28 13:43:28'),
+(589, 'Menu', 1, 'Menghapus data lama', 'Isi data sebelumnya adalah parent = Dashboard, menu_nama = Report, menu_index = 2, menu_icon = far fa-circle, menu_url = dashboard/report, menu_keterangan = -, menu_status = Aktif', 3, '2022-05-28 13:43:31'),
+(590, 'Term Management', 1, 'Mengubah isi data sebelumnya menjadi menu = Dashboard a, nama = Dashboard, keterangan = -, status = Aktif', 'Isi data sebelumnya adalah menu = Dashboard a, nama = Home, -, status = Aktif', 2, '2022-05-28 13:48:49'),
+(591, 'Menu', 1, 'Menambah data baru dengan isi parent =  , menu_nama = Resource, menu_index = 2, menu_icon = fas fa-save, menu_url = #, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:34:15'),
+(592, 'Menu', 1, 'Menambah data baru dengan isi parent = Dashboard, menu_nama = Resource, menu_index = 2, menu_icon = fas fa-save, menu_url = #, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:35:39'),
+(593, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent =  , menu_nama = Resource, menu_index = 2, menu_icon = fas fa-save, menu_url = #, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = Dashboard, menu_nama = Resource, menu_index = 2, menu_icon = fas fa-save, menu_url = #, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 14:35:48'),
+(594, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent = , menu_nama = Resource, menu_index = 2, menu_icon = fas fa-save, menu_url = #, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Resource, menu_index = 2, menu_icon = fas fa-save, menu_url = #, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 14:37:40'),
+(595, 'Menu', 1, 'Menghapus data lama', 'Isi data sebelumnya adalah parent = , menu_nama = Resource, menu_index = 2, menu_icon = fas fa-save, menu_url = #, menu_keterangan = -, menu_status = Aktif', 3, '2022-05-28 14:39:20'),
+(596, '', 1, 'Menambah data baru dengan isi menu = Resource, level = Super Admin', 'Belum ada data', 1, '2022-05-28 14:39:27'),
+(597, '', 1, 'Menghapus data lama', 'Isi data sebelumnya adalah menu = Hak Akses, level = Super Admin', 3, '2022-05-28 14:39:51'),
+(598, 'Menu', 1, 'Menambah data baru dengan isi parent = Resource, menu_nama = Ebook, menu_index = 1, menu_icon = far fa-circle, menu_url = admin/resource/ebook, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:41:45'),
+(599, 'Menu', 1, 'Menambah data baru dengan isi parent = Resource, menu_nama = Video, menu_index = 2, menu_icon = far fa-circle, menu_url = admin/resource/video, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:42:09'),
+(600, 'Menu', 1, 'Menambah data baru dengan isi parent = Dashboard, menu_nama = Audiobooks, menu_index = 3, menu_icon = fa fa-suitcase, menu_url = admin/resource/audiobooks, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:42:31'),
+(601, 'Menu', 1, 'Menambah data baru dengan isi parent = Resource, menu_nama = Podcast, menu_index = 4, menu_icon = fa fa-suitcase, menu_url = admin/resource/podcast, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:42:59');
+INSERT INTO `activity_log` (`id`, `modul`, `by`, `data_baru`, `data_lama`, `jenis_perubahan`, `created_at`) VALUES
+(602, 'Menu', 1, 'Menambah data baru dengan isi parent = Resource, menu_nama = Articles, menu_index = 5, menu_icon = far fa-circle, menu_url = admin/resource/articles, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:43:25'),
+(603, 'Menu', 1, 'Menambah data baru dengan isi parent = Resource, menu_nama = Music, menu_index = 6, menu_icon = fa fa-suitcase, menu_url = admin/resource/music, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:43:47'),
+(604, '', 1, 'Menambah data baru dengan isi menu = Ebook, level = Super Admin', 'Belum ada data', 1, '2022-05-28 14:44:28'),
+(605, '', 1, 'Menambah data baru dengan isi menu = Video, level = Super Admin', 'Belum ada data', 1, '2022-05-28 14:44:29'),
+(606, '', 1, 'Menambah data baru dengan isi menu = Podcast, level = Super Admin', 'Belum ada data', 1, '2022-05-28 14:44:31'),
+(607, '', 1, 'Menambah data baru dengan isi menu = Articles, level = Super Admin', 'Belum ada data', 1, '2022-05-28 14:44:31'),
+(608, '', 1, 'Menambah data baru dengan isi menu = Music, level = Super Admin', 'Belum ada data', 1, '2022-05-28 14:44:32'),
+(609, 'Menu', 1, 'Menambah data baru dengan isi parent =  , menu_nama = Categories, menu_index = 3, menu_icon = fas fa-chart-network, menu_url = admin/categories, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:47:19'),
+(610, 'Menu', 1, 'Menambah data baru dengan isi parent =  , menu_nama = Categories, menu_index = 3, menu_icon = fas fa-chart-network, menu_url = admin/categories, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:47:54'),
+(611, 'Menu', 1, 'Menambah data baru dengan isi parent = , menu_nama = Categories, menu_index = 3, menu_icon = fas fa-chart-network, menu_url = admin/categories, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:49:31'),
+(612, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent = , menu_nama = Categories, menu_index = 3, menu_icon = fas fa-project-diagram, menu_url = admin/categories, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Categories, menu_index = 3, menu_icon = fas fa-chart-network, menu_url = admin/categories, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 14:50:17'),
+(613, 'Menu', 1, 'Menghapus data lama', 'Isi data sebelumnya adalah parent = , menu_nama = Categories, menu_index = 3, menu_icon = fas fa-chart-network, menu_url = admin/categories, menu_keterangan = -, menu_status = Aktif', 3, '2022-05-28 14:50:20'),
+(614, 'Menu', 1, 'Menghapus data lama', 'Isi data sebelumnya adalah parent = , menu_nama = Categories, menu_index = 3, menu_icon = fas fa-chart-network, menu_url = admin/categories, menu_keterangan = -, menu_status = Aktif', 3, '2022-05-28 14:50:23'),
+(615, '', 1, 'Menambah data baru dengan isi menu = Categories, level = Super Admin', 'Belum ada data', 1, '2022-05-28 14:50:30'),
+(616, 'Menu', 1, 'Menambah data baru dengan isi parent = , menu_nama = Transaction, menu_index = 4, menu_icon = fas fa-receipt, menu_url = admin/transaction, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 14:52:09'),
+(617, '', 1, 'Menambah data baru dengan isi menu = Transaction, level = Super Admin', 'Belum ada data', 1, '2022-05-28 14:52:19'),
+(618, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent = 1, menu_nama = Audiobooks, menu_index = 3, menu_icon = fa fa-suitcase, menu_url = admin/resource/audiobooks, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = Dashboard, menu_nama = Audiobooks, menu_index = 3, menu_icon = fa fa-suitcase, menu_url = admin/resource/audiobooks, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 20:23:40'),
+(619, '', 1, 'Menambah data baru dengan isi menu = Audiobooks, level = Super Admin', 'Belum ada data', 1, '2022-05-28 20:23:58'),
+(620, 'Menu', 1, 'Menambah data baru dengan isi parent = , menu_nama = Priceing, menu_index = 5, menu_icon = fas fa-dollar-sign, menu_url = admin/priceing, menu_keterangan = -, menu_status = Aktif', 'Belum ada data', 1, '2022-05-28 21:34:55'),
+(621, '', 1, 'Menambah data baru dengan isi menu = Priceing, level = Super Admin', 'Belum ada data', 1, '2022-05-28 21:35:07'),
+(622, 'Menu', 1, 'Mengubah isi data sebelumnya menjadi parent = , menu_nama = Pricing, menu_index = 5, menu_icon = fas fa-dollar-sign, menu_url = admin/pricing, menu_keterangan = -, menu_status = Aktif', 'Isi data sebelumnya adalah parent = , menu_nama = Priceing, menu_index = 5, menu_icon = fas fa-dollar-sign, menu_url = admin/priceing, menu_keterangan = -, menu_status = Aktif', 2, '2022-05-28 21:36:35');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `alamat`
+-- Table structure for table `alamat`
 --
 
 CREATE TABLE `alamat` (
@@ -661,7 +707,7 @@ CREATE TABLE `alamat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `alamat`
+-- Dumping data for table `alamat`
 --
 
 INSERT INTO `alamat` (`id`, `id_profile`, `id_jenis_alamat`, `alamat`, `domisili`, `tanggal_mulai`, `tanggal_selesai`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -714,7 +760,7 @@ INSERT INTO `alamat` (`id`, `id_profile`, `id_jenis_alamat`, `alamat`, `domisili
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `client_company`
+-- Table structure for table `client_company`
 --
 
 CREATE TABLE `client_company` (
@@ -732,7 +778,7 @@ CREATE TABLE `client_company` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `client_company`
+-- Dumping data for table `client_company`
 --
 
 INSERT INTO `client_company` (`id`, `nama`, `alamat`, `no_telepon`, `email`, `id_resiko`, `remark`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -750,7 +796,7 @@ INSERT INTO `client_company` (`id`, `nama`, `alamat`, `no_telepon`, `email`, `id
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `contact`
+-- Table structure for table `contact`
 --
 
 CREATE TABLE `contact` (
@@ -766,7 +812,7 @@ CREATE TABLE `contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `contact`
+-- Dumping data for table `contact`
 --
 
 INSERT INTO `contact` (`id`, `id_profile`, `id_tipe_contact`, `keterangan`, `tanggal`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -836,7 +882,7 @@ INSERT INTO `contact` (`id`, `id_profile`, `id_tipe_contact`, `keterangan`, `tan
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dashboard_activation`
+-- Table structure for table `dashboard_activation`
 --
 
 CREATE TABLE `dashboard_activation` (
@@ -851,7 +897,7 @@ CREATE TABLE `dashboard_activation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `dashboard_activation`
+-- Dumping data for table `dashboard_activation`
 --
 
 INSERT INTO `dashboard_activation` (`id`, `spm`, `repository`, `p2pk`, `aktifitas`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -860,7 +906,7 @@ INSERT INTO `dashboard_activation` (`id`, `spm`, `repository`, `p2pk`, `aktifita
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_formal`
+-- Table structure for table `data_formal`
 --
 
 CREATE TABLE `data_formal` (
@@ -892,7 +938,7 @@ CREATE TABLE `data_formal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `data_formal`
+-- Dumping data for table `data_formal`
 --
 
 INSERT INTO `data_formal` (`id`, `kode`, `kode_tahun_bulan`, `id_profile`, `dtm_peristiwa_id`, `keterangan`, `tempat`, `photo`, `tanggal_data_formal`, `keterangan_2`, `rencana_tanggal`, `upload_hardcopy`, `status`, `id_approval`, `tanggal_approval`, `status_terlaksana`, `nama_calon_1`, `tanggal_lahir_calon_1`, `nama_calon_2`, `tanggal_lahir_calon_2`, `id_institusi`, `idjabatan`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1009,7 +1055,7 @@ INSERT INTO `data_formal` (`id`, `kode`, `kode_tahun_bulan`, `id_profile`, `dtm_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_formal_detail`
+-- Table structure for table `data_formal_detail`
 --
 
 CREATE TABLE `data_formal_detail` (
@@ -1024,7 +1070,7 @@ CREATE TABLE `data_formal_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `data_formal_detail`
+-- Dumping data for table `data_formal_detail`
 --
 
 INSERT INTO `data_formal_detail` (`id`, `id_data_formal`, `id_profile`, `id_posisi`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1048,7 +1094,7 @@ INSERT INTO `data_formal_detail` (`id`, `id_data_formal`, `id_profile`, `id_posi
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dtm_peristiwa`
+-- Table structure for table `dtm_peristiwa`
 --
 
 CREATE TABLE `dtm_peristiwa` (
@@ -1063,7 +1109,7 @@ CREATE TABLE `dtm_peristiwa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `dtm_peristiwa`
+-- Dumping data for table `dtm_peristiwa`
 --
 
 INSERT INTO `dtm_peristiwa` (`id`, `name`, `kategori`, `details`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1078,7 +1124,7 @@ INSERT INTO `dtm_peristiwa` (`id`, `name`, `kategori`, `details`, `status`, `cre
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gelar`
+-- Table structure for table `gelar`
 --
 
 CREATE TABLE `gelar` (
@@ -1096,7 +1142,7 @@ CREATE TABLE `gelar` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `institusi`
+-- Table structure for table `institusi`
 --
 
 CREATE TABLE `institusi` (
@@ -1110,7 +1156,7 @@ CREATE TABLE `institusi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `institusi`
+-- Dumping data for table `institusi`
 --
 
 INSERT INTO `institusi` (`id`, `nama`, `keterangan`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1121,7 +1167,7 @@ INSERT INTO `institusi` (`id`, `nama`, `keterangan`, `status`, `created_at`, `up
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jabatan`
+-- Table structure for table `jabatan`
 --
 
 CREATE TABLE `jabatan` (
@@ -1136,7 +1182,7 @@ CREATE TABLE `jabatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jabatan`
+-- Dumping data for table `jabatan`
 --
 
 INSERT INTO `jabatan` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1148,7 +1194,7 @@ INSERT INTO `jabatan` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `created
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_alamat`
+-- Table structure for table `jenis_alamat`
 --
 
 CREATE TABLE `jenis_alamat` (
@@ -1162,7 +1208,7 @@ CREATE TABLE `jenis_alamat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jenis_alamat`
+-- Dumping data for table `jenis_alamat`
 --
 
 INSERT INTO `jenis_alamat` (`id`, `nama`, `keterangan`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1174,7 +1220,7 @@ INSERT INTO `jenis_alamat` (`id`, `nama`, `keterangan`, `status`, `created_at`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_gelar`
+-- Table structure for table `jenis_gelar`
 --
 
 CREATE TABLE `jenis_gelar` (
@@ -1188,7 +1234,7 @@ CREATE TABLE `jenis_gelar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jenis_gelar`
+-- Dumping data for table `jenis_gelar`
 --
 
 INSERT INTO `jenis_gelar` (`id`, `nama`, `keterangan`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1201,7 +1247,7 @@ INSERT INTO `jenis_gelar` (`id`, `nama`, `keterangan`, `status`, `created_at`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_membership`
+-- Table structure for table `jenis_membership`
 --
 
 CREATE TABLE `jenis_membership` (
@@ -1216,7 +1262,7 @@ CREATE TABLE `jenis_membership` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jenis_membership`
+-- Dumping data for table `jenis_membership`
 --
 
 INSERT INTO `jenis_membership` (`id`, `nama`, `keterangan`, `status`, `id_level`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1229,7 +1275,7 @@ INSERT INTO `jenis_membership` (`id`, `nama`, `keterangan`, `status`, `id_level`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategorial`
+-- Table structure for table `kategorial`
 --
 
 CREATE TABLE `kategorial` (
@@ -1242,7 +1288,7 @@ CREATE TABLE `kategorial` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kategorial`
+-- Dumping data for table `kategorial`
 --
 
 INSERT INTO `kategorial` (`id`, `nama`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1265,7 +1311,7 @@ INSERT INTO `kategorial` (`id`, `nama`, `status`, `created_at`, `updated_at`, `d
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori_keanggotaan`
+-- Table structure for table `kategori_keanggotaan`
 --
 
 CREATE TABLE `kategori_keanggotaan` (
@@ -1280,7 +1326,7 @@ CREATE TABLE `kategori_keanggotaan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kategori_keanggotaan`
+-- Dumping data for table `kategori_keanggotaan`
 --
 
 INSERT INTO `kategori_keanggotaan` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1295,7 +1341,7 @@ INSERT INTO `kategori_keanggotaan` (`id`, `nama`, `keterangan`, `no_urut`, `stat
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori_p2pk`
+-- Table structure for table `kategori_p2pk`
 --
 
 CREATE TABLE `kategori_p2pk` (
@@ -1310,7 +1356,7 @@ CREATE TABLE `kategori_p2pk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kategori_p2pk`
+-- Dumping data for table `kategori_p2pk`
 --
 
 INSERT INTO `kategori_p2pk` (`id`, `id_menu`, `nama`, `keterangan`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1329,7 +1375,7 @@ INSERT INTO `kategori_p2pk` (`id`, `id_menu`, `nama`, `keterangan`, `status`, `c
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `keaktifan_pilihan`
+-- Table structure for table `keaktifan_pilihan`
 --
 
 CREATE TABLE `keaktifan_pilihan` (
@@ -1344,7 +1390,7 @@ CREATE TABLE `keaktifan_pilihan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `keaktifan_pilihan`
+-- Dumping data for table `keaktifan_pilihan`
 --
 
 INSERT INTO `keaktifan_pilihan` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1356,7 +1402,7 @@ INSERT INTO `keaktifan_pilihan` (`id`, `nama`, `keterangan`, `no_urut`, `status`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kepanitiaan`
+-- Table structure for table `kepanitiaan`
 --
 
 CREATE TABLE `kepanitiaan` (
@@ -1371,7 +1417,7 @@ CREATE TABLE `kepanitiaan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kepanitiaan`
+-- Dumping data for table `kepanitiaan`
 --
 
 INSERT INTO `kepanitiaan` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1381,7 +1427,7 @@ INSERT INTO `kepanitiaan` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `cre
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `keys`
+-- Table structure for table `keys`
 --
 
 CREATE TABLE `keys` (
@@ -1393,7 +1439,7 @@ CREATE TABLE `keys` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data untuk tabel `keys`
+-- Dumping data for table `keys`
 --
 
 INSERT INTO `keys` (`id`, `user_id`, `key`, `level`, `date_created`) VALUES
@@ -1402,7 +1448,7 @@ INSERT INTO `keys` (`id`, `user_id`, `key`, `level`, `date_created`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kode`
+-- Table structure for table `kode`
 --
 
 CREATE TABLE `kode` (
@@ -1422,7 +1468,7 @@ CREATE TABLE `kode` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kode`
+-- Dumping data for table `kode`
 --
 
 INSERT INTO `kode` (`id`, `id_menu`, `id_kategori`, `kode_kategori`, `keterangan_kategori`, `kode`, `bulan`, `tahun`, `jumlah`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1444,7 +1490,7 @@ INSERT INTO `kode` (`id`, `id_menu`, `id_kategori`, `kode_kategori`, `keterangan
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `komisi`
+-- Table structure for table `komisi`
 --
 
 CREATE TABLE `komisi` (
@@ -1459,7 +1505,7 @@ CREATE TABLE `komisi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `komisi`
+-- Dumping data for table `komisi`
 --
 
 INSERT INTO `komisi` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1471,7 +1517,7 @@ INSERT INTO `komisi` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `created_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `laporan_header`
+-- Table structure for table `laporan_header`
 --
 
 CREATE TABLE `laporan_header` (
@@ -1489,7 +1535,7 @@ CREATE TABLE `laporan_header` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `laporan_header`
+-- Dumping data for table `laporan_header`
 --
 
 INSERT INTO `laporan_header` (`id`, `id_menu`, `logo_1`, `logo_2`, `judul`, `keterangan_1`, `keterangan_2`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1499,7 +1545,7 @@ INSERT INTO `laporan_header` (`id`, `id_menu`, `logo_1`, `logo_2`, `judul`, `ket
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `level`
+-- Table structure for table `level`
 --
 
 CREATE TABLE `level` (
@@ -1511,7 +1557,7 @@ CREATE TABLE `level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `level`
+-- Dumping data for table `level`
 --
 
 INSERT INTO `level` (`lev_id`, `lev_nama`, `lev_keterangan`, `lev_status`, `created_at`) VALUES
@@ -1524,7 +1570,7 @@ INSERT INTO `level` (`lev_id`, `lev_nama`, `lev_keterangan`, `lev_status`, `crea
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `member`
+-- Table structure for table `member`
 --
 
 CREATE TABLE `member` (
@@ -1551,7 +1597,7 @@ CREATE TABLE `member` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `membership`
+-- Table structure for table `membership`
 --
 
 CREATE TABLE `membership` (
@@ -1568,7 +1614,7 @@ CREATE TABLE `membership` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `membership`
+-- Dumping data for table `membership`
 --
 
 INSERT INTO `membership` (`id`, `id_profile`, `id_jenis_membership`, `id_approver`, `tanggal_approval`, `tanggal_anggota`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1585,7 +1631,7 @@ INSERT INTO `membership` (`id`, `id_profile`, `id_jenis_membership`, `id_approve
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `membership_atasan`
+-- Table structure for table `membership_atasan`
 --
 
 CREATE TABLE `membership_atasan` (
@@ -1598,7 +1644,7 @@ CREATE TABLE `membership_atasan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `membership_atasan`
+-- Dumping data for table `membership_atasan`
 --
 
 INSERT INTO `membership_atasan` (`id`, `id_profile`, `id_membership`, `id_profile_atasan`, `status`, `created_at`) VALUES
@@ -1638,7 +1684,7 @@ INSERT INTO `membership_atasan` (`id`, `id_profile`, `id_membership`, `id_profil
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `menu`
+-- Table structure for table `menu`
 --
 
 CREATE TABLE `menu` (
@@ -1654,11 +1700,11 @@ CREATE TABLE `menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `menu`
+-- Dumping data for table `menu`
 --
 
 INSERT INTO `menu` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterangan`, `menu_index`, `menu_icon`, `menu_url`, `menu_status`, `created_at`) VALUES
-(1, 0, 'Dashboard', '-', 1, 'fa fa-suitcase', 'dashboard', 'Aktif', '2020-06-18 02:40:07'),
+(1, 0, 'Dashboard', '-', 1, 'fa fa-suitcase', 'admin/dashboard', 'Aktif', '2020-06-18 02:40:07'),
 (2, 0, 'Users', '-', 7, 'fa fa-cogs', '#', 'Aktif', '2020-06-18 02:40:07'),
 (3, 2, 'Hak Akses', '-', 8, 'far fa-circle', 'pengaturan/hakAkses', 'Aktif', '2020-06-18 02:40:07'),
 (4, 2, 'Menu', '-', 9, 'far fa-circle', 'pengaturan/menu', 'Aktif', '2020-06-18 02:40:07'),
@@ -1696,8 +1742,6 @@ INSERT INTO `menu` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterangan`, `
 (127, 82, 'Wilayah', '-', 5, 'far fa-circle', 'pengaturan/wilayah', 'Aktif', '2022-03-01 05:07:33'),
 (128, 82, 'Kategori Keanggotaan', '-', 9, 'far fa-circle', 'data-master/kategoriKeanggotaan', 'Aktif', '2022-03-05 19:24:42'),
 (129, 120, 'Laporan Header', '-', 8, 'far fa-circle', 'data-master/laporan-header', 'Aktif', '2022-03-21 05:01:51'),
-(130, 1, 'Dashboard', '-', 1, 'far fa-circle', 'dashboard', 'Aktif', '2022-03-25 05:54:16'),
-(131, 1, 'Report', '-', 2, 'far fa-circle', 'dashboard/report', 'Aktif', '2022-03-25 05:54:34'),
 (132, 82, 'Jabatan', '-', 11, 'far fa-circle', 'data-master/jabatan', 'Aktif', '2022-04-01 19:07:25'),
 (133, 82, 'Pengarah', '-', 12, 'far fa-circle', 'data-master/pengarah', 'Aktif', '2022-04-01 19:07:49'),
 (134, 82, 'Komisi', '-', 13, 'far fa-circle', 'data-master/komisi', 'Aktif', '2022-04-01 19:08:19'),
@@ -1705,12 +1749,22 @@ INSERT INTO `menu` (`menu_id`, `menu_menu_id`, `menu_nama`, `menu_keterangan`, `
 (136, 120, 'Institusi', '-', 3, 'far fa-circle', 'data-master/institusi', 'Aktif', '2022-04-22 10:02:07'),
 (137, 0, 'Laporan', '-', 9, 'fas fa-book', '#', 'Aktif', '2022-05-09 08:46:36'),
 (138, 120, 'Export Import Data Member ', '-', 1, 'far fa-circle', 'laporan/member', 'Aktif', '2022-05-09 08:47:33'),
-(139, 82, 'Pilihan Keaktifan', '-', 14, 'far fa-circle', 'data-master/pilihanKeaktifan', 'Aktif', '2022-05-24 00:20:56');
+(139, 82, 'Pilihan Keaktifan', '-', 14, 'far fa-circle', 'data-master/pilihanKeaktifan', 'Aktif', '2022-05-24 00:20:56'),
+(140, 0, 'Resource', '-', 2, 'fas fa-save', '#', 'Aktif', '2022-05-28 07:34:15'),
+(142, 140, 'Ebook', '-', 1, 'far fa-circle', 'admin/resource/ebook', 'Aktif', '2022-05-28 07:41:45'),
+(143, 140, 'Video', '-', 2, 'far fa-circle', 'admin/resource/video', 'Aktif', '2022-05-28 07:42:09'),
+(144, 140, 'Audiobooks', '-', 3, 'fa fa-suitcase', 'admin/resource/audiobooks', 'Aktif', '2022-05-28 07:42:31'),
+(145, 140, 'Podcast', '-', 4, 'fa fa-suitcase', 'admin/resource/podcast', 'Aktif', '2022-05-28 07:42:59'),
+(146, 140, 'Articles', '-', 5, 'far fa-circle', 'admin/resource/articles', 'Aktif', '2022-05-28 07:43:25'),
+(147, 140, 'Music', '-', 6, 'fa fa-suitcase', 'admin/resource/music', 'Aktif', '2022-05-28 07:43:47'),
+(148, 0, 'Categories', '-', 3, 'fas fa-project-diagram', 'admin/categories', 'Aktif', '2022-05-28 07:47:19'),
+(151, 0, 'Transaction', '-', 4, 'fas fa-receipt', 'admin/transaction', 'Aktif', '2022-05-28 07:52:09'),
+(152, 0, 'Pricing', '-', 5, 'fas fa-dollar-sign', 'admin/pricing', 'Aktif', '2022-05-28 14:34:55');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `module_activation`
+-- Table structure for table `module_activation`
 --
 
 CREATE TABLE `module_activation` (
@@ -1726,7 +1780,7 @@ CREATE TABLE `module_activation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `module_activation`
+-- Dumping data for table `module_activation`
 --
 
 INSERT INTO `module_activation` (`id`, `p2pk`, `spm`, `repository`, `aktifitas`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1735,7 +1789,7 @@ INSERT INTO `module_activation` (`id`, `p2pk`, `spm`, `repository`, `aktifitas`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `notifikasi`
+-- Table structure for table `notifikasi`
 --
 
 CREATE TABLE `notifikasi` (
@@ -1751,7 +1805,7 @@ CREATE TABLE `notifikasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `notifikasi`
+-- Dumping data for table `notifikasi`
 --
 
 INSERT INTO `notifikasi` (`id`, `dari`, `ke`, `judul`, `keterangan`, `status`, `created_at`, `updated_at`, `delteted_at`) VALUES
@@ -1789,7 +1843,7 @@ INSERT INTO `notifikasi` (`id`, `dari`, `ke`, `judul`, `keterangan`, `status`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `p2pk`
+-- Table structure for table `p2pk`
 --
 
 CREATE TABLE `p2pk` (
@@ -1809,7 +1863,7 @@ CREATE TABLE `p2pk` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `p2pk_planning`
+-- Table structure for table `p2pk_planning`
 --
 
 CREATE TABLE `p2pk_planning` (
@@ -1829,7 +1883,7 @@ CREATE TABLE `p2pk_planning` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `p2pk_planning_file`
+-- Table structure for table `p2pk_planning_file`
 --
 
 CREATE TABLE `p2pk_planning_file` (
@@ -1846,7 +1900,7 @@ CREATE TABLE `p2pk_planning_file` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `p2pk_proses_audit`
+-- Table structure for table `p2pk_proses_audit`
 --
 
 CREATE TABLE `p2pk_proses_audit` (
@@ -1865,7 +1919,7 @@ CREATE TABLE `p2pk_proses_audit` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `p2pk_proses_audit_file`
+-- Table structure for table `p2pk_proses_audit_file`
 --
 
 CREATE TABLE `p2pk_proses_audit_file` (
@@ -1882,7 +1936,7 @@ CREATE TABLE `p2pk_proses_audit_file` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `p2pk_report`
+-- Table structure for table `p2pk_report`
 --
 
 CREATE TABLE `p2pk_report` (
@@ -1898,7 +1952,7 @@ CREATE TABLE `p2pk_report` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `p2pk_report_detail`
+-- Table structure for table `p2pk_report_detail`
 --
 
 CREATE TABLE `p2pk_report_detail` (
@@ -1923,7 +1977,7 @@ CREATE TABLE `p2pk_report_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `p2pk_report_detail`
+-- Dumping data for table `p2pk_report_detail`
 --
 
 INSERT INTO `p2pk_report_detail` (`id`, `id_p2pk_report`, `report_phase`, `id_approval`, `nama`, `file`, `tanggal_upload`, `tanggal_approval_diminta`, `file_komen`, `komentar`, `tanggal_komentar_submit`, `status`, `created_at`, `updated_at`, `deleted_at`, `status_kondisi_upload_file`, `status_kondisi_approval`, `status_kondisi_file_komentar`) VALUES
@@ -1979,7 +2033,7 @@ INSERT INTO `p2pk_report_detail` (`id`, `id_p2pk_report`, `report_phase`, `id_ap
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `partner`
+-- Table structure for table `partner`
 --
 
 CREATE TABLE `partner` (
@@ -1996,7 +2050,7 @@ CREATE TABLE `partner` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `partner`
+-- Dumping data for table `partner`
 --
 
 INSERT INTO `partner` (`id`, `nama`, `no_telepon`, `email`, `lokasi`, `photo`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2039,7 +2093,7 @@ INSERT INTO `partner` (`id`, `nama`, `no_telepon`, `email`, `lokasi`, `photo`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengarah`
+-- Table structure for table `pengarah`
 --
 
 CREATE TABLE `pengarah` (
@@ -2054,7 +2108,7 @@ CREATE TABLE `pengarah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pengarah`
+-- Dumping data for table `pengarah`
 --
 
 INSERT INTO `pengarah` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2066,7 +2120,7 @@ INSERT INTO `pengarah` (`id`, `nama`, `keterangan`, `no_urut`, `status`, `create
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengaturan_aplikasi`
+-- Table structure for table `pengaturan_aplikasi`
 --
 
 CREATE TABLE `pengaturan_aplikasi` (
@@ -2080,16 +2134,16 @@ CREATE TABLE `pengaturan_aplikasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pengaturan_aplikasi`
+-- Dumping data for table `pengaturan_aplikasi`
 --
 
 INSERT INTO `pengaturan_aplikasi` (`id`, `nama_aplikasi`, `keterangan`, `logo`, `favicon`, `status`, `created_at`) VALUES
-(1, 'CmMS', 'Aplikasi Keanggotaan', 'be06780e6d4ad0f21c83e171d69e3c49.png', '5c1955efca59b79fd864e38c7c56a9b4.png', NULL, NULL);
+(1, 'App Name', 'Applicaiton Name', 'be06780e6d4ad0f21c83e171d69e3c49.png', '5c1955efca59b79fd864e38c7c56a9b4.png', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `posisi`
+-- Table structure for table `posisi`
 --
 
 CREATE TABLE `posisi` (
@@ -2103,7 +2157,7 @@ CREATE TABLE `posisi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `posisi`
+-- Dumping data for table `posisi`
 --
 
 INSERT INTO `posisi` (`id`, `nama`, `no_urut`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2122,7 +2176,7 @@ INSERT INTO `posisi` (`id`, `nama`, `no_urut`, `status`, `created_at`, `updated_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profesi`
+-- Table structure for table `profesi`
 --
 
 CREATE TABLE `profesi` (
@@ -2138,7 +2192,7 @@ CREATE TABLE `profesi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profile`
+-- Table structure for table `profile`
 --
 
 CREATE TABLE `profile` (
@@ -2167,7 +2221,7 @@ CREATE TABLE `profile` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `profile`
+-- Dumping data for table `profile`
 --
 
 INSERT INTO `profile` (`id`, `id_keanggotaan`, `kode`, `kode_tahun_bulan`, `kode_keanggotaan`, `id_user`, `nama_depan`, `nama_belakang`, `jenis_kelamin`, `photo`, `status`, `status_verifikasi`, `tanggal_anggota`, `id_kategorial`, `id_wilayah`, `flag`, `tanggal_registrasi`, `tanggal_lahir`, `tanggal_meninggal`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2235,7 +2289,7 @@ INSERT INTO `profile` (`id`, `id_keanggotaan`, `kode`, `kode_tahun_bulan`, `kode
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profile_kategorial`
+-- Table structure for table `profile_kategorial`
 --
 
 CREATE TABLE `profile_kategorial` (
@@ -2250,7 +2304,7 @@ CREATE TABLE `profile_kategorial` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `profile_kategorial`
+-- Dumping data for table `profile_kategorial`
 --
 
 INSERT INTO `profile_kategorial` (`id`, `id_profile`, `id_kategorial`, `tanggal`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2303,7 +2357,7 @@ INSERT INTO `profile_kategorial` (`id`, `id_profile`, `id_kategorial`, `tanggal`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profile_keaktifan`
+-- Table structure for table `profile_keaktifan`
 --
 
 CREATE TABLE `profile_keaktifan` (
@@ -2322,7 +2376,7 @@ CREATE TABLE `profile_keaktifan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `profile_keaktifan`
+-- Dumping data for table `profile_keaktifan`
 --
 
 INSERT INTO `profile_keaktifan` (`id`, `id_profile`, `id_jabatan`, `tanggal_mulai`, `tanggal_selesai`, `status`, `kode_master`, `id_master`, `text_master`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2335,7 +2389,7 @@ INSERT INTO `profile_keaktifan` (`id`, `id_profile`, `id_jabatan`, `tanggal_mula
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profile_keanggotaan`
+-- Table structure for table `profile_keanggotaan`
 --
 
 CREATE TABLE `profile_keanggotaan` (
@@ -2352,7 +2406,7 @@ CREATE TABLE `profile_keanggotaan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `profile_keanggotaan`
+-- Dumping data for table `profile_keanggotaan`
 --
 
 INSERT INTO `profile_keanggotaan` (`id`, `id_profile`, `id_kategori_keanggotaan`, `tanggal`, `id_approver`, `tanggal_approval`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2423,7 +2477,7 @@ INSERT INTO `profile_keanggotaan` (`id`, `id_profile`, `id_kategori_keanggotaan`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profile_wilayah`
+-- Table structure for table `profile_wilayah`
 --
 
 CREATE TABLE `profile_wilayah` (
@@ -2438,7 +2492,7 @@ CREATE TABLE `profile_wilayah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `profile_wilayah`
+-- Dumping data for table `profile_wilayah`
 --
 
 INSERT INTO `profile_wilayah` (`id`, `id_profile`, `id_wilayah`, `tanggal`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2491,7 +2545,7 @@ INSERT INTO `profile_wilayah` (`id`, `id_profile`, `id_wilayah`, `tanggal`, `sta
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `repository`
+-- Table structure for table `repository`
 --
 
 CREATE TABLE `repository` (
@@ -2509,7 +2563,7 @@ CREATE TABLE `repository` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `resiko`
+-- Table structure for table `resiko`
 --
 
 CREATE TABLE `resiko` (
@@ -2522,7 +2576,7 @@ CREATE TABLE `resiko` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `resiko`
+-- Dumping data for table `resiko`
 --
 
 INSERT INTO `resiko` (`id`, `nama`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2539,7 +2593,7 @@ INSERT INTO `resiko` (`id`, `nama`, `status`, `created_at`, `updated_at`, `delet
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `role_aplikasi`
+-- Table structure for table `role_aplikasi`
 --
 
 CREATE TABLE `role_aplikasi` (
@@ -2550,11 +2604,10 @@ CREATE TABLE `role_aplikasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `role_aplikasi`
+-- Dumping data for table `role_aplikasi`
 --
 
 INSERT INTO `role_aplikasi` (`rola_id`, `rola_menu_id`, `rola_lev_id`, `created_at`) VALUES
-(1, 1, 1, '2021-07-14 12:27:04'),
 (3, 4, 1, '2021-07-14 12:27:17'),
 (4, 5, 1, '2021-07-14 12:27:25'),
 (5, 6, 1, '2021-07-14 12:27:31'),
@@ -2566,7 +2619,6 @@ INSERT INTO `role_aplikasi` (`rola_id`, `rola_menu_id`, `rola_lev_id`, `created_
 (37, 7, 5, '2021-07-14 13:13:56'),
 (40, 32, 5, '2021-07-14 13:14:57'),
 (105, 74, 1, '2021-08-19 06:58:31'),
-(113, 3, 1, '2021-08-25 09:01:35'),
 (141, 93, 1, '2021-09-17 03:49:15'),
 (147, 82, 1, '2021-09-23 05:26:15'),
 (148, 96, 1, '2021-09-23 05:26:15'),
@@ -2672,12 +2724,23 @@ INSERT INTO `role_aplikasi` (`rola_id`, `rola_menu_id`, `rola_lev_id`, `created_
 (278, 135, 1, '2022-04-01 19:09:05'),
 (279, 136, 1, '2022-04-22 10:02:18'),
 (281, 138, 1, '2022-05-09 08:47:38'),
-(282, 139, 1, '2022-05-24 00:21:27');
+(282, 139, 1, '2022-05-24 00:21:27'),
+(283, 1, 1, '2022-05-28 06:41:13'),
+(284, 140, 1, '2022-05-28 07:39:27'),
+(285, 142, 1, '2022-05-28 07:44:28'),
+(286, 143, 1, '2022-05-28 07:44:29'),
+(287, 145, 1, '2022-05-28 07:44:31'),
+(288, 146, 1, '2022-05-28 07:44:31'),
+(289, 147, 1, '2022-05-28 07:44:32'),
+(290, 148, 1, '2022-05-28 07:50:30'),
+(291, 151, 1, '2022-05-28 07:52:19'),
+(292, 144, 1, '2022-05-28 13:23:58'),
+(293, 152, 1, '2022-05-28 14:35:07');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `role_users`
+-- Table structure for table `role_users`
 --
 
 CREATE TABLE `role_users` (
@@ -2688,7 +2751,7 @@ CREATE TABLE `role_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `role_users`
+-- Dumping data for table `role_users`
 --
 
 INSERT INTO `role_users` (`role_id`, `role_user_id`, `role_lev_id`, `created_at`) VALUES
@@ -2756,7 +2819,7 @@ INSERT INTO `role_users` (`role_id`, `role_user_id`, `role_lev_id`, `created_at`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `spm`
+-- Table structure for table `spm`
 --
 
 CREATE TABLE `spm` (
@@ -2774,7 +2837,7 @@ CREATE TABLE `spm` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `template_download`
+-- Table structure for table `template_download`
 --
 
 CREATE TABLE `template_download` (
@@ -2789,7 +2852,7 @@ CREATE TABLE `template_download` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `template_download`
+-- Dumping data for table `template_download`
 --
 
 INSERT INTO `template_download` (`id`, `tahapan`, `kategori`, `no_urut`, `nama`, `berkas`, `status`, `created_at`) VALUES
@@ -2813,7 +2876,7 @@ INSERT INTO `template_download` (`id`, `tahapan`, `kategori`, `no_urut`, `nama`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `term_management`
+-- Table structure for table `term_management`
 --
 
 CREATE TABLE `term_management` (
@@ -2828,11 +2891,11 @@ CREATE TABLE `term_management` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `term_management`
+-- Dumping data for table `term_management`
 --
 
 INSERT INTO `term_management` (`id`, `id_menu`, `nama`, `keterangan`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 'Home', '-', '1', '2021-11-03 15:51:04', NULL, NULL),
+(1, 1, 'Dashboard', '-', '1', '2021-11-03 15:51:04', NULL, NULL),
 (2, 3, 'Hak Akses', '-', '1', '2021-11-03 15:51:19', NULL, NULL),
 (3, 4, 'Menu', '-', '1', '2021-11-03 15:53:21', NULL, NULL),
 (4, 5, 'Level', '-', '1', '2021-11-03 15:53:34', NULL, NULL),
@@ -2872,7 +2935,7 @@ INSERT INTO `term_management` (`id`, `id_menu`, `nama`, `keterangan`, `status`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tipe_contact`
+-- Table structure for table `tipe_contact`
 --
 
 CREATE TABLE `tipe_contact` (
@@ -2886,7 +2949,7 @@ CREATE TABLE `tipe_contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tipe_contact`
+-- Dumping data for table `tipe_contact`
 --
 
 INSERT INTO `tipe_contact` (`id`, `nama`, `keterangan`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2897,7 +2960,7 @@ INSERT INTO `tipe_contact` (`id`, `nama`, `keterangan`, `status`, `created_at`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tokens`
+-- Table structure for table `tokens`
 --
 
 CREATE TABLE `tokens` (
@@ -2908,7 +2971,7 @@ CREATE TABLE `tokens` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tokens`
+-- Dumping data for table `tokens`
 --
 
 INSERT INTO `tokens` (`id`, `token`, `user_id`, `created`) VALUES
@@ -2921,7 +2984,7 @@ INSERT INTO `tokens` (`id`, `token`, `user_id`, `created`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `trainer`
+-- Table structure for table `trainer`
 --
 
 CREATE TABLE `trainer` (
@@ -2935,7 +2998,7 @@ CREATE TABLE `trainer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `trainer`
+-- Dumping data for table `trainer`
 --
 
 INSERT INTO `trainer` (`id`, `nama`, `id_profile`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2948,7 +3011,7 @@ INSERT INTO `trainer` (`id`, `nama`, `id_profile`, `status`, `created_at`, `upda
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -2970,7 +3033,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `id_partner`, `id_posisi`, `nik`, `user_nama`, `user_tgl_lahir`, `user_jk`, `user_password`, `user_email`, `user_email_status`, `user_phone`, `user_foto`, `user_status`, `created_at`, `updated_at`) VALUES
@@ -3038,7 +3101,7 @@ INSERT INTO `users` (`user_id`, `id_partner`, `id_posisi`, `nik`, `user_nama`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `version`
+-- Table structure for table `version`
 --
 
 CREATE TABLE `version` (
@@ -3053,7 +3116,7 @@ CREATE TABLE `version` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `version`
+-- Dumping data for table `version`
 --
 
 INSERT INTO `version` (`id`, `nama`, `keterangan`, `tanggal_release`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -3067,7 +3130,7 @@ INSERT INTO `version` (`id`, `nama`, `keterangan`, `tanggal_release`, `status`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah`
+-- Table structure for table `wilayah`
 --
 
 CREATE TABLE `wilayah` (
@@ -3080,7 +3143,7 @@ CREATE TABLE `wilayah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `wilayah`
+-- Dumping data for table `wilayah`
 --
 
 INSERT INTO `wilayah` (`id`, `nama`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -3102,47 +3165,47 @@ INSERT INTO `wilayah` (`id`, `nama`, `status`, `created_at`, `updated_at`, `dele
 --
 
 --
--- Indeks untuk tabel `activity`
+-- Indexes for table `activity`
 --
 ALTER TABLE `activity`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `activity_log`
+-- Indexes for table `activity_log`
 --
 ALTER TABLE `activity_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `Key` (`by`);
 
 --
--- Indeks untuk tabel `alamat`
+-- Indexes for table `alamat`
 --
 ALTER TABLE `alamat`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_profile` (`id_profile`);
 
 --
--- Indeks untuk tabel `client_company`
+-- Indexes for table `client_company`
 --
 ALTER TABLE `client_company`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_resiko` (`id_resiko`);
 
 --
--- Indeks untuk tabel `contact`
+-- Indexes for table `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_profile` (`id_profile`);
 
 --
--- Indeks untuk tabel `dashboard_activation`
+-- Indexes for table `dashboard_activation`
 --
 ALTER TABLE `dashboard_activation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `data_formal`
+-- Indexes for table `data_formal`
 --
 ALTER TABLE `data_formal`
   ADD PRIMARY KEY (`id`),
@@ -3150,87 +3213,87 @@ ALTER TABLE `data_formal`
   ADD KEY `dtm_peristiwa_id` (`dtm_peristiwa_id`);
 
 --
--- Indeks untuk tabel `data_formal_detail`
+-- Indexes for table `data_formal_detail`
 --
 ALTER TABLE `data_formal_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dtm_peristiwa`
+-- Indexes for table `dtm_peristiwa`
 --
 ALTER TABLE `dtm_peristiwa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `gelar`
+-- Indexes for table `gelar`
 --
 ALTER TABLE `gelar`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_profile` (`id_profile`);
 
 --
--- Indeks untuk tabel `institusi`
+-- Indexes for table `institusi`
 --
 ALTER TABLE `institusi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `jabatan`
+-- Indexes for table `jabatan`
 --
 ALTER TABLE `jabatan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `jenis_alamat`
+-- Indexes for table `jenis_alamat`
 --
 ALTER TABLE `jenis_alamat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `jenis_gelar`
+-- Indexes for table `jenis_gelar`
 --
 ALTER TABLE `jenis_gelar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `jenis_membership`
+-- Indexes for table `jenis_membership`
 --
 ALTER TABLE `jenis_membership`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_level` (`id_level`);
 
 --
--- Indeks untuk tabel `kategorial`
+-- Indexes for table `kategorial`
 --
 ALTER TABLE `kategorial`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `kategori_keanggotaan`
+-- Indexes for table `kategori_keanggotaan`
 --
 ALTER TABLE `kategori_keanggotaan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `kategori_p2pk`
+-- Indexes for table `kategori_p2pk`
 --
 ALTER TABLE `kategori_p2pk`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `keaktifan_pilihan`
+-- Indexes for table `keaktifan_pilihan`
 --
 ALTER TABLE `keaktifan_pilihan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `kepanitiaan`
+-- Indexes for table `kepanitiaan`
 --
 ALTER TABLE `kepanitiaan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `keys`
+-- Indexes for table `keys`
 --
 ALTER TABLE `keys`
   ADD PRIMARY KEY (`id`),
@@ -3238,31 +3301,31 @@ ALTER TABLE `keys`
   ADD KEY `level` (`level`);
 
 --
--- Indeks untuk tabel `kode`
+-- Indexes for table `kode`
 --
 ALTER TABLE `kode`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `komisi`
+-- Indexes for table `komisi`
 --
 ALTER TABLE `komisi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `laporan_header`
+-- Indexes for table `laporan_header`
 --
 ALTER TABLE `laporan_header`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `level`
+-- Indexes for table `level`
 --
 ALTER TABLE `level`
   ADD PRIMARY KEY (`lev_id`);
 
 --
--- Indeks untuk tabel `member`
+-- Indexes for table `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`id`),
@@ -3270,7 +3333,7 @@ ALTER TABLE `member`
   ADD KEY `updated_by` (`updated_by`);
 
 --
--- Indeks untuk tabel `membership`
+-- Indexes for table `membership`
 --
 ALTER TABLE `membership`
   ADD PRIMARY KEY (`id`),
@@ -3278,650 +3341,650 @@ ALTER TABLE `membership`
   ADD KEY `id_profile` (`id_profile`);
 
 --
--- Indeks untuk tabel `membership_atasan`
+-- Indexes for table `membership_atasan`
 --
 ALTER TABLE `membership_atasan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `menu`
+-- Indexes for table `menu`
 --
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`menu_id`);
 
 --
--- Indeks untuk tabel `module_activation`
+-- Indexes for table `module_activation`
 --
 ALTER TABLE `module_activation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `notifikasi`
+-- Indexes for table `notifikasi`
 --
 ALTER TABLE `notifikasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `p2pk`
+-- Indexes for table `p2pk`
 --
 ALTER TABLE `p2pk`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `p2pk_planning`
+-- Indexes for table `p2pk_planning`
 --
 ALTER TABLE `p2pk_planning`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `p2pk_planning_file`
+-- Indexes for table `p2pk_planning_file`
 --
 ALTER TABLE `p2pk_planning_file`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `p2pk_proses_audit`
+-- Indexes for table `p2pk_proses_audit`
 --
 ALTER TABLE `p2pk_proses_audit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `p2pk_proses_audit_file`
+-- Indexes for table `p2pk_proses_audit_file`
 --
 ALTER TABLE `p2pk_proses_audit_file`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `p2pk_report`
+-- Indexes for table `p2pk_report`
 --
 ALTER TABLE `p2pk_report`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `p2pk_report_detail`
+-- Indexes for table `p2pk_report_detail`
 --
 ALTER TABLE `p2pk_report_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `partner`
+-- Indexes for table `partner`
 --
 ALTER TABLE `partner`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pengarah`
+-- Indexes for table `pengarah`
 --
 ALTER TABLE `pengarah`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pengaturan_aplikasi`
+-- Indexes for table `pengaturan_aplikasi`
 --
 ALTER TABLE `pengaturan_aplikasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `posisi`
+-- Indexes for table `posisi`
 --
 ALTER TABLE `posisi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `profesi`
+-- Indexes for table `profesi`
 --
 ALTER TABLE `profesi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_profile` (`id_profile`);
 
 --
--- Indeks untuk tabel `profile`
+-- Indexes for table `profile`
 --
 ALTER TABLE `profile`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indeks untuk tabel `profile_kategorial`
+-- Indexes for table `profile_kategorial`
 --
 ALTER TABLE `profile_kategorial`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `profile_keaktifan`
+-- Indexes for table `profile_keaktifan`
 --
 ALTER TABLE `profile_keaktifan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `profile_keanggotaan`
+-- Indexes for table `profile_keanggotaan`
 --
 ALTER TABLE `profile_keanggotaan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `profile_wilayah`
+-- Indexes for table `profile_wilayah`
 --
 ALTER TABLE `profile_wilayah`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `repository`
+-- Indexes for table `repository`
 --
 ALTER TABLE `repository`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `resiko`
+-- Indexes for table `resiko`
 --
 ALTER TABLE `resiko`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `role_aplikasi`
+-- Indexes for table `role_aplikasi`
 --
 ALTER TABLE `role_aplikasi`
   ADD PRIMARY KEY (`rola_id`);
 
 --
--- Indeks untuk tabel `role_users`
+-- Indexes for table `role_users`
 --
 ALTER TABLE `role_users`
   ADD PRIMARY KEY (`role_id`);
 
 --
--- Indeks untuk tabel `spm`
+-- Indexes for table `spm`
 --
 ALTER TABLE `spm`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `template_download`
+-- Indexes for table `template_download`
 --
 ALTER TABLE `template_download`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `term_management`
+-- Indexes for table `term_management`
 --
 ALTER TABLE `term_management`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tipe_contact`
+-- Indexes for table `tipe_contact`
 --
 ALTER TABLE `tipe_contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tokens`
+-- Indexes for table `tokens`
 --
 ALTER TABLE `tokens`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `trainer`
+-- Indexes for table `trainer`
 --
 ALTER TABLE `trainer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Indeks untuk tabel `version`
+-- Indexes for table `version`
 --
 ALTER TABLE `version`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `wilayah`
+-- Indexes for table `wilayah`
 --
 ALTER TABLE `wilayah`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `activity`
+-- AUTO_INCREMENT for table `activity`
 --
 ALTER TABLE `activity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `activity_log`
+-- AUTO_INCREMENT for table `activity_log`
 --
 ALTER TABLE `activity_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=578;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=623;
 
 --
--- AUTO_INCREMENT untuk tabel `alamat`
+-- AUTO_INCREMENT for table `alamat`
 --
 ALTER TABLE `alamat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT untuk tabel `client_company`
+-- AUTO_INCREMENT for table `client_company`
 --
 ALTER TABLE `client_company`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `contact`
+-- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
--- AUTO_INCREMENT untuk tabel `dashboard_activation`
+-- AUTO_INCREMENT for table `dashboard_activation`
 --
 ALTER TABLE `dashboard_activation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `data_formal`
+-- AUTO_INCREMENT for table `data_formal`
 --
 ALTER TABLE `data_formal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
--- AUTO_INCREMENT untuk tabel `data_formal_detail`
+-- AUTO_INCREMENT for table `data_formal_detail`
 --
 ALTER TABLE `data_formal_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT untuk tabel `dtm_peristiwa`
+-- AUTO_INCREMENT for table `dtm_peristiwa`
 --
 ALTER TABLE `dtm_peristiwa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `gelar`
+-- AUTO_INCREMENT for table `gelar`
 --
 ALTER TABLE `gelar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `institusi`
+-- AUTO_INCREMENT for table `institusi`
 --
 ALTER TABLE `institusi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `jabatan`
+-- AUTO_INCREMENT for table `jabatan`
 --
 ALTER TABLE `jabatan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `jenis_alamat`
+-- AUTO_INCREMENT for table `jenis_alamat`
 --
 ALTER TABLE `jenis_alamat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `jenis_gelar`
+-- AUTO_INCREMENT for table `jenis_gelar`
 --
 ALTER TABLE `jenis_gelar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `jenis_membership`
+-- AUTO_INCREMENT for table `jenis_membership`
 --
 ALTER TABLE `jenis_membership`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `kategorial`
+-- AUTO_INCREMENT for table `kategorial`
 --
 ALTER TABLE `kategorial`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT untuk tabel `kategori_keanggotaan`
+-- AUTO_INCREMENT for table `kategori_keanggotaan`
 --
 ALTER TABLE `kategori_keanggotaan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `kategori_p2pk`
+-- AUTO_INCREMENT for table `kategori_p2pk`
 --
 ALTER TABLE `kategori_p2pk`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `keaktifan_pilihan`
+-- AUTO_INCREMENT for table `keaktifan_pilihan`
 --
 ALTER TABLE `keaktifan_pilihan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `kepanitiaan`
+-- AUTO_INCREMENT for table `kepanitiaan`
 --
 ALTER TABLE `kepanitiaan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `keys`
+-- AUTO_INCREMENT for table `keys`
 --
 ALTER TABLE `keys`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `kode`
+-- AUTO_INCREMENT for table `kode`
 --
 ALTER TABLE `kode`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT untuk tabel `komisi`
+-- AUTO_INCREMENT for table `komisi`
 --
 ALTER TABLE `komisi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `laporan_header`
+-- AUTO_INCREMENT for table `laporan_header`
 --
 ALTER TABLE `laporan_header`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `level`
+-- AUTO_INCREMENT for table `level`
 --
 ALTER TABLE `level`
   MODIFY `lev_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 
 --
--- AUTO_INCREMENT untuk tabel `member`
+-- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `membership`
+-- AUTO_INCREMENT for table `membership`
 --
 ALTER TABLE `membership`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- AUTO_INCREMENT untuk tabel `membership_atasan`
+-- AUTO_INCREMENT for table `membership_atasan`
 --
 ALTER TABLE `membership_atasan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
--- AUTO_INCREMENT untuk tabel `menu`
+-- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
 
 --
--- AUTO_INCREMENT untuk tabel `module_activation`
+-- AUTO_INCREMENT for table `module_activation`
 --
 ALTER TABLE `module_activation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `notifikasi`
+-- AUTO_INCREMENT for table `notifikasi`
 --
 ALTER TABLE `notifikasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=179;
 
 --
--- AUTO_INCREMENT untuk tabel `p2pk`
+-- AUTO_INCREMENT for table `p2pk`
 --
 ALTER TABLE `p2pk`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `p2pk_planning`
+-- AUTO_INCREMENT for table `p2pk_planning`
 --
 ALTER TABLE `p2pk_planning`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `p2pk_planning_file`
+-- AUTO_INCREMENT for table `p2pk_planning_file`
 --
 ALTER TABLE `p2pk_planning_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `p2pk_proses_audit`
+-- AUTO_INCREMENT for table `p2pk_proses_audit`
 --
 ALTER TABLE `p2pk_proses_audit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `p2pk_proses_audit_file`
+-- AUTO_INCREMENT for table `p2pk_proses_audit_file`
 --
 ALTER TABLE `p2pk_proses_audit_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `p2pk_report`
+-- AUTO_INCREMENT for table `p2pk_report`
 --
 ALTER TABLE `p2pk_report`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `p2pk_report_detail`
+-- AUTO_INCREMENT for table `p2pk_report_detail`
 --
 ALTER TABLE `p2pk_report_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT untuk tabel `partner`
+-- AUTO_INCREMENT for table `partner`
 --
 ALTER TABLE `partner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
--- AUTO_INCREMENT untuk tabel `pengarah`
+-- AUTO_INCREMENT for table `pengarah`
 --
 ALTER TABLE `pengarah`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `pengaturan_aplikasi`
+-- AUTO_INCREMENT for table `pengaturan_aplikasi`
 --
 ALTER TABLE `pengaturan_aplikasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `posisi`
+-- AUTO_INCREMENT for table `posisi`
 --
 ALTER TABLE `posisi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `profesi`
+-- AUTO_INCREMENT for table `profesi`
 --
 ALTER TABLE `profesi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `profile`
+-- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
 
 --
--- AUTO_INCREMENT untuk tabel `profile_kategorial`
+-- AUTO_INCREMENT for table `profile_kategorial`
 --
 ALTER TABLE `profile_kategorial`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT untuk tabel `profile_keaktifan`
+-- AUTO_INCREMENT for table `profile_keaktifan`
 --
 ALTER TABLE `profile_keaktifan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `profile_keanggotaan`
+-- AUTO_INCREMENT for table `profile_keanggotaan`
 --
 ALTER TABLE `profile_keanggotaan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT untuk tabel `profile_wilayah`
+-- AUTO_INCREMENT for table `profile_wilayah`
 --
 ALTER TABLE `profile_wilayah`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT untuk tabel `repository`
+-- AUTO_INCREMENT for table `repository`
 --
 ALTER TABLE `repository`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `resiko`
+-- AUTO_INCREMENT for table `resiko`
 --
 ALTER TABLE `resiko`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `role_aplikasi`
+-- AUTO_INCREMENT for table `role_aplikasi`
 --
 ALTER TABLE `role_aplikasi`
-  MODIFY `rola_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=283;
+  MODIFY `rola_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=294;
 
 --
--- AUTO_INCREMENT untuk tabel `role_users`
+-- AUTO_INCREMENT for table `role_users`
 --
 ALTER TABLE `role_users`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=263;
 
 --
--- AUTO_INCREMENT untuk tabel `spm`
+-- AUTO_INCREMENT for table `spm`
 --
 ALTER TABLE `spm`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `template_download`
+-- AUTO_INCREMENT for table `template_download`
 --
 ALTER TABLE `template_download`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT untuk tabel `term_management`
+-- AUTO_INCREMENT for table `term_management`
 --
 ALTER TABLE `term_management`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT untuk tabel `tipe_contact`
+-- AUTO_INCREMENT for table `tipe_contact`
 --
 ALTER TABLE `tipe_contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `tokens`
+-- AUTO_INCREMENT for table `tokens`
 --
 ALTER TABLE `tokens`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
--- AUTO_INCREMENT untuk tabel `trainer`
+-- AUTO_INCREMENT for table `trainer`
 --
 ALTER TABLE `trainer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=281;
 
 --
--- AUTO_INCREMENT untuk tabel `version`
+-- AUTO_INCREMENT for table `version`
 --
 ALTER TABLE `version`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `wilayah`
+-- AUTO_INCREMENT for table `wilayah`
 --
 ALTER TABLE `wilayah`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `activity_log`
+-- Constraints for table `activity_log`
 --
 ALTER TABLE `activity_log`
   ADD CONSTRAINT `activity_log_ibfk_1` FOREIGN KEY (`by`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `alamat`
+-- Constraints for table `alamat`
 --
 ALTER TABLE `alamat`
   ADD CONSTRAINT `alamat_ibfk_1` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `client_company`
+-- Constraints for table `client_company`
 --
 ALTER TABLE `client_company`
   ADD CONSTRAINT `client_company_ibfk_1` FOREIGN KEY (`id_resiko`) REFERENCES `resiko` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `contact`
+-- Constraints for table `contact`
 --
 ALTER TABLE `contact`
   ADD CONSTRAINT `contact_ibfk_1` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `data_formal`
+-- Constraints for table `data_formal`
 --
 ALTER TABLE `data_formal`
   ADD CONSTRAINT `data_formal_ibfk_1` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `data_formal_ibfk_2` FOREIGN KEY (`dtm_peristiwa_id`) REFERENCES `dtm_peristiwa` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `gelar`
+-- Constraints for table `gelar`
 --
 ALTER TABLE `gelar`
   ADD CONSTRAINT `gelar_ibfk_1` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `jenis_membership`
+-- Constraints for table `jenis_membership`
 --
 ALTER TABLE `jenis_membership`
   ADD CONSTRAINT `jenis_membership_ibfk_1` FOREIGN KEY (`id_level`) REFERENCES `level` (`lev_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `keys`
+-- Constraints for table `keys`
 --
 ALTER TABLE `keys`
   ADD CONSTRAINT `keys_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `keys_ibfk_2` FOREIGN KEY (`level`) REFERENCES `level` (`lev_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `membership`
+-- Constraints for table `membership`
 --
 ALTER TABLE `membership`
   ADD CONSTRAINT `membership_ibfk_2` FOREIGN KEY (`id_jenis_membership`) REFERENCES `jenis_membership` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `membership_ibfk_3` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `profesi`
+-- Constraints for table `profesi`
 --
 ALTER TABLE `profesi`
   ADD CONSTRAINT `profesi_ibfk_1` FOREIGN KEY (`id_profile`) REFERENCES `profile` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `profile`
+-- Constraints for table `profile`
 --
 ALTER TABLE `profile`
   ADD CONSTRAINT `profile_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;

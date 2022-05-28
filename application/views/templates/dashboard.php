@@ -87,14 +87,11 @@
 				<li class="nav-item">
 					<a class="nav-link" href="<?= base_url() ?>" role="button">Dashboard</a>
 				</li>
-				<li class="nav-item d-none d-sm-inline-block">
-					<a style="color: black; font-size: 24px; font-weight: bold; margin-top: -5px; margin-left: 500px;" href="#" class="nav-link"><?= $detail_aplikasi['keterangan'] ?></a>
-				</li>
-				<!-- 
-				<li class="nav-item d-none d-sm-inline-block">
-					<a href="#" class="nav-link">Contact</a>
-				</li> -->
 			</ul>
+
+			<div class="d-flex justify-content-center" style="width: 100%;">
+				<a style="font-size: 24px; font-weight: bold; margin-top: -5px;" href="#" id="top-title"><?= $detail_aplikasi['keterangan'] ?></a>
+			</div>
 
 			<!-- Right navbar links -->
 			<ul class="navbar-nav ml-auto">
@@ -109,7 +106,6 @@
 						<span class="dropdown-header" id="jumlah-notifikasi">0 Notifikasi</span>
 						<div id="list-notifikasi"></div>
 						<div class="dropdown-divider"></div>
-						<!-- <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a> -->
 					</div>
 				</li>
 				<li class="nav-item">
@@ -133,11 +129,6 @@
 						<i class="fas fa-sign-out-alt"></i>
 					</button>
 				</li>
-				<!-- <li class="nav-item">
-					<a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-						<i class="fas fa-th-large"></i>
-					</a>
-				</li> -->
 			</ul>
 		</nav>
 		<!-- /.navbar -->
@@ -330,19 +321,22 @@
 
 			function setDarkMode(data) {
 				data = data == 'null' ? false : ((typeof(data) == 'string') ? (data == 'false' ? false : true) : data);
-
+				const title = $('#top-title');
 				if (data) {
 					$("body").addClass("dark-mode")
 					$("#nav-top").removeClass("navbar-white")
 					$("#nav-top").addClass("navbar-dark")
 					$(".preloader").addClass("bg-dark")
 					$("#dark-mode-switch-label").html('<i class="far fa-sun"></i>');
+					title.attr('class', 'text-light');
 				} else {
+					title.attr('class', 'text-dark');
 					$("body").removeClass("dark-mode")
 					$("#nav-top").removeClass("navbar-dark")
 					$(".preloader").removeClass("bg-dark")
 					$("#nav-top").addClass("navbar-white")
 					$("#dark-mode-switch-label").html('<i class="far fa-moon"></i>');
+
 				}
 				localStorage.setItem('isDarkMode', data);
 				document.querySelector("#dark-mode-switch").checked = data;

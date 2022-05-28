@@ -115,9 +115,9 @@ class Render_Controller extends CI_Controller
 		$this->template_type 	= $this->config->item('template_type');
 		$this->version 			= $this->db->order_by('tanggal_release', 'desc')->get_where('version', ['status' => 1]);
 		$this->detail_aplikasi 	= $this->db->get_where('pengaturan_aplikasi')->row_array();
-		if($this->version->num_rows() > 0){
+		if ($this->version->num_rows() > 0) {
 			$this->version = $this->version->row_array()['nama'];
-		}else{
+		} else {
 			$this->version = '';
 		}
 		$this->load->library('plugin');
@@ -126,7 +126,7 @@ class Render_Controller extends CI_Controller
 	private function navigationHtml($navigation)
 	{
 		$modul = $this->db->get_where('module_activation')->row_array();
-        
+
 
 		$menu_header = '<nav class="mt-2"><ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">';
 		$menu_body = '';
@@ -134,9 +134,9 @@ class Render_Controller extends CI_Controller
 		$button_logout = '<li class="nav-item btn-logout"> <a href="#" class="nav-link "> <i class="nav-icon fas fa-sign-out-alt"></i><p>Logout</p> </a> </li>';
 		$main_menu = $this->navigationToArray($navigation);
 		foreach ($main_menu as $menu) {
-			if($menu['menu_id'] == 98){ //SPM
+			if ($menu['menu_id'] == 98) { //SPM
 				if ($modul['spm'] == 1) {
-		        	$menu_open = $menu['active_sub'] ? ' menu-open' : '';
+					$menu_open = $menu['active_sub'] ? ' menu-open' : '';
 					$menu_active = $menu['active'] ? ' active' : '';
 					$menu_nama = $menu['nama'] != null ? $menu['nama'] : $menu['menu_nama'];
 					$menu_icon = $menu['menu_icon'];
@@ -173,10 +173,10 @@ class Render_Controller extends CI_Controller
 								' . $sub_menu_html . '
 						</li>
 					';
-		        }
-			}elseif($menu['menu_id'] == 97){ //P2PK
+				}
+			} elseif ($menu['menu_id'] == 97) { //P2PK
 				if ($modul['p2pk'] == 1) {
-		        	$menu_open = $menu['active_sub'] ? ' menu-open' : '';
+					$menu_open = $menu['active_sub'] ? ' menu-open' : '';
 					$menu_active = $menu['active'] ? ' active' : '';
 					$menu_nama = $menu['nama'] != null ? $menu['nama'] : $menu['menu_nama'];
 					$menu_icon = $menu['menu_icon'];
@@ -213,10 +213,10 @@ class Render_Controller extends CI_Controller
 								' . $sub_menu_html . '
 						</li>
 					';
-		        }
-			}elseif($menu['menu_id'] == 99){ //REPOSITORY
+				}
+			} elseif ($menu['menu_id'] == 99) { //REPOSITORY
 				if ($modul['repository'] == 1) {
-		        	$menu_open = $menu['active_sub'] ? ' menu-open' : '';
+					$menu_open = $menu['active_sub'] ? ' menu-open' : '';
 					$menu_active = $menu['active'] ? ' active' : '';
 					$menu_nama = $menu['nama'] != null ? $menu['nama'] : $menu['menu_nama'];
 					$menu_icon = $menu['menu_icon'];
@@ -253,10 +253,10 @@ class Render_Controller extends CI_Controller
 								' . $sub_menu_html . '
 						</li>
 					';
-		        }
-			}elseif($menu['menu_id'] == 114){ //AKTIFITAS
+				}
+			} elseif ($menu['menu_id'] == 114) { //AKTIFITAS
 				if ($modul['aktifitas'] == 1) {
-		        	$menu_open = $menu['active_sub'] ? ' menu-open' : '';
+					$menu_open = $menu['active_sub'] ? ' menu-open' : '';
 					$menu_active = $menu['active'] ? ' active' : '';
 					$menu_nama = $menu['nama'] != null ? $menu['nama'] : $menu['menu_nama'];
 					$menu_icon = $menu['menu_icon'];
@@ -293,9 +293,8 @@ class Render_Controller extends CI_Controller
 								' . $sub_menu_html . '
 						</li>
 					';
-		        }
-
-			}else{
+				}
+			} else {
 				$menu_open = $menu['active_sub'] ? ' menu-open' : '';
 				$menu_active = $menu['active'] ? ' active' : '';
 				$menu_nama = $menu['nama'] != null ? $menu['nama'] : $menu['menu_nama'];
@@ -332,9 +331,8 @@ class Render_Controller extends CI_Controller
 							</a>
 							' . $sub_menu_html . '
 					</li>
-				';	
+				';
 			}
-			
 		}
 		$result = $menu_header . $menu_body . $button_logout . $menu_footer;
 		return $result;

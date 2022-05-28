@@ -65,12 +65,13 @@ class MenuModel extends Render_Model
 		$execute                 = $this->db->insert('menu', $data);
 		$exe['id']               = $this->db->insert_id();
 		$exe['parent']           = $this->cekMenu($menu_menu_id);
+		$parent =  $this->getIsiTableById('menu', ['menu_id' => $menu_menu_id]);
 		if ($execute) {
 			$modul           = $this->getMenuTitle();
 			$id              = $this->db->insert_id();
 			$by              = $this->getLogId();
 			$jenis_perubahan = 1;
-			$parent = $this->getIsiTableById('menu', ['menu_id' => $menu_menu_id])['menu_nama'];
+			$parent = isset($parent['menu_nama'])  ? isset($parent['menu_nama']) : null;
 			$data_lama       = "Belum ada data";
 			$data_baru       = "Menambah data baru dengan isi parent = $parent, menu_nama = $nama, menu_index = $index, menu_icon = $icon, menu_url = $url, menu_keterangan = $keterangan, menu_status = $status";
 			$this->setActivityLog($modul, $by, $jenis_perubahan, $data_lama, $data_baru);
@@ -97,11 +98,12 @@ class MenuModel extends Render_Model
 		$execute                 = $this->db->update('menu', $data);
 		$exe['id']               = $id;
 		$exe['parent']           = $this->cekMenu($menu_menu_id);
+		$parent =  $this->getIsiTableById('menu', ['menu_id' => $menu_menu_id]);
 		if ($execute) {
 			$modul           = $this->getMenuTitle();
 			$by              = $this->getLogId();
 			$jenis_perubahan = 2;
-			$parent = $this->getIsiTableById('menu', ['menu_id' => $menu_menu_id])['menu_nama'];
+			$parent = isset($parent['menu_nama'])  ? isset($parent['menu_nama']) : '';
 			$data_lama       = "Isi data sebelumnya adalah parent = $sebelumnya[parent], menu_nama = $sebelumnya[menu_nama], menu_index = $sebelumnya[menu_index], menu_icon = $sebelumnya[menu_icon], menu_url = $sebelumnya[menu_url], menu_keterangan = $sebelumnya[menu_keterangan], menu_status = $sebelumnya[menu_status]";
 			$data_baru       = "Mengubah isi data sebelumnya menjadi parent = $parent, menu_nama = $nama, menu_index = $index, menu_icon = $icon, menu_url = $url, menu_keterangan = $keterangan, menu_status = $status";
 			$this->setActivityLog($modul, $by, $jenis_perubahan, $data_lama, $data_baru);

@@ -1,0 +1,120 @@
+Dashboard
+    Overview Subscription Count, Revenue Sum, Etc,
+    Subscription diagram
+    Revenue diagram
+
+Resource
+    Ebook
+        No
+        Ttile
+        Author
+        Description
+        Type [Free, Sell]
+        Source [File, Hyperlink]
+        Category
+        Total pages
+        Cover
+
+    Video
+        No
+        Ttile
+        Description
+        Duration
+        Type [Free, Sell]
+        Source [File, Hyperlink]
+        Category
+        Cover
+
+    Audiobooks
+        No
+        Ttile
+        Description
+        Author
+        Duration
+        Type [Free, Sell]
+        Source [File, Hyperlink]
+        Category
+        Cover
+
+    Podcast
+        No
+        Ttile
+        Description
+        Speaker
+        Duration
+        Type [Free, Sell]
+        Source [File, Hyperlink]
+        Category
+        Cover
+
+    Articles
+        No
+        Ttile
+        Description
+        Author
+        Type [Free, Sell]
+        Source [File, Hyperlink]
+        Category
+        Cover
+
+    Music
+        No
+        Ttile
+        Description
+        Singer
+        Duration
+        Year
+        Type [Free, Sell]
+        Source [File, Hyperlink]
+        Category
+        Cover
+
+Categories
+    No
+    Name
+    Description
+    Used
+
+Transaction
+    No
+    Title
+    Member
+    Description
+    Amount
+    Product
+    Status
+
+
+
+Revisi
+    Type
+    Upload full
+    upload trial
+    Tag
+    Status [Publish, Simpan]
+
+    Viewer
+    Save
+
+    Menu paket ( Memntukan batas individu per organisasi )
+    filter
+    summery
+
+    Member
+    Individu
+    Organisasi > Individu
+        Paket
+        Total Member
+        
+
+
+    Buat data faker minimal 10 record
+    
+
+Pricing
+    Title
+    Description
+    Price
+    Duration
+    Duration Text
+    Features[]

@@ -100,3 +100,12 @@ $config['switch'] = [
 		'assets/plugins/bootstrap-switch-button/js/bootstrap-switch-button.min.js'
 	]
 ];
+
+$config['chartjs'] = [
+	'styles' => [
+		'assets/plugins/chartjs/Chart.css'
+	],
+	'scripts' => [
+		'assets/plugins/chartjs/Chart.js'
+	]
+];
