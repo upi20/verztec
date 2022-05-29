@@ -109,3 +109,27 @@ CREATE TABLE `transaction` (
 	`product` VARCHAR(255) NOT NULL,
 	PRIMARY KEY (`id`)
 )
+
+CREATE TABLE `individual` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`status` int(1) NOT NULL,
+	`name` VARCHAR(255) NOT NULL,
+	`address` text NOT NULL,
+	`city` text NOT NULL,
+	`since` DATETIME NOT NULL,
+	`description` VARCHAR(255) NOT NULL,
+	`packet` VARCHAR(255) NOT NULL,
+	PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `organization` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`max` int(11) NOT NULL,
+	`name` VARCHAR(255) NOT NULL,
+	`address` text NOT NULL,
+	`city` text NOT NULL,
+	`since` DATETIME NOT NULL,
+	`description` VARCHAR(255) NOT NULL,
+	`packet` VARCHAR(255) NOT NULL,
+	PRIMARY KEY (`id`)
+)

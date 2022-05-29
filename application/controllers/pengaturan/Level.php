@@ -10,15 +10,15 @@ class Level extends Render_Controller
 		// Page Settings
 		$this->title 					= $this->getMenuTitle();
 		$this->content 					= 'pengaturan/level';
-		$this->navigation 				= ['Pengaturan', 'Level'];
+		$this->navigation 				= ['User role'];
 		$this->plugins 					= ['datatables', 'datatables-btn'];
 
 		// Breadcrumb setting
 		$this->breadcrumb_1 			= 'Dashboard';
-		$this->breadcrumb_1_url 		= base_url() . 'dashboard';
-		$this->breadcrumb_2 			= 'Pengaturan';
+		// $this->breadcrumb_1_url 		= base_url() . 'dashboard';
+		// $this->breadcrumb_2 			= 'Pengaturan';
 		$this->breadcrumb_2_url 		= '#';
-		$this->breadcrumb_3 			= 'Level';
+		$this->breadcrumb_3 			= 'User role';
 		$this->breadcrumb_3_url 		= '#';
 
 		// Send data to view

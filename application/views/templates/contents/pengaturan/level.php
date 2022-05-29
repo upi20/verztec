@@ -10,8 +10,8 @@
         <table id="example1" class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Nama Level</th>
-                    <th>Keterangan</th>
+                    <th>Name</th>
+                    <th>Description</th>
                     <th>Status</th>
                     <th>Aksi</th>
                 </tr>
@@ -24,12 +24,12 @@
                         <td><?= $q['lev_status'] ?></td>
                         <td>
                             <div>
-                                <a href="<?= base_url() ?>pengaturan/hakakseslevel/<?= $q['lev_id'] ?>" class="btn btn-info btn-sm mr-1"><i class="fa fa-key"></i> Hak Akses</a>
+                                <a href="<?= base_url() ?>pengaturan/hakakseslevel/<?= $q['lev_id'] ?>" class="btn btn-info btn-sm mr-1"><i class="fa fa-key"></i> Access rights</a>
                                 <button class="btn btn-primary btn-sm" onclick="Ubah(<?= $q['lev_id'] ?>)">
-                                    <i class="fa fa-edit"></i> Ubah
+                                    <i class="fa fa-edit"></i> Edit
                                 </button>
                                 <button class="btn btn-danger btn-sm" onclick="Hapus(<?= $q['lev_id'] ?>)">
-                                    <i class="fa fa-trash"></i> Hapus
+                                    <i class="fa fa-trash"></i> Delete
                                 </button>
                             </div>
                         </td>
