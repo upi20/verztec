@@ -25,6 +25,53 @@
                     <th>Used</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+
+                        <button class="btn btn-primary btn-sm nowrap my-1">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-sm nowrap my-1">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </td>
+                    <td>Religion</td>
+                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
+                    <td>900</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+
+                        <button class="btn btn-primary btn-sm nowrap my-1">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-sm nowrap my-1">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </td>
+                    <td>Education</td>
+                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+
+                        <button class="btn btn-primary btn-sm nowrap my-1">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-sm nowrap my-1">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </td>
+                    <td>Journey</td>
+                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
+                    <td>500</td>
+                </tr>
+            </tbody>
         </table>
         <hr>
     </div>

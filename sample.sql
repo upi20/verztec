@@ -98,3 +98,14 @@ CREATE TABLE `article` (
 	`seen` int(11) NOT NULL,
 	PRIMARY KEY (`id`)
 )
+
+CREATE TABLE `transaction` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`status` int(1) NOT NULL,
+	`datetime` DATETIME NOT NULL,
+	`member` VARCHAR(255) NOT NULL,
+	`description` VARCHAR(255) NOT NULL,
+	`amount` int(11) NOT NULL,
+	`product` VARCHAR(255) NOT NULL,
+	PRIMARY KEY (`id`)
+)

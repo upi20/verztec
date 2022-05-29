@@ -11,7 +11,7 @@ class Podcast extends Render_Controller
         $this->title = "Podcast";
         $this->content = 'admin/resource/podcast';
         $this->navigation = ['Podcast'];
-        $this->plugins = ['chartjs', 'datatables'];
+        $this->plugins = ['chartjs', 'datatables', 'select2'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';
