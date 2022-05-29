@@ -1,3 +1,4 @@
+<!-- filter -->
 <div class="card card-info card-outline" id="filter">
     <div class="card-header">
         <div class="container-fluid">
@@ -45,13 +46,14 @@
     </div>
 </div>
 
+<!-- Summary -->
 <div class="row">
     <div class="col-md-2 col-sm-6 col-12">
         <div class="info-box">
             <span class="info-box-icon bg-info"><i class="fas fa-book"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Total Book</span>
-                <span class="info-box-number">500 Books</span>
+                <span class="info-box-number">500 Book</span>
             </div>
         </div>
     </div>
