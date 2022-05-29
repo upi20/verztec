@@ -74,11 +74,11 @@
 
                 <div class="d-flex flex-row justify-content-end">
                     <span class="mr-2">
-                        <i class="fas fa-square text-primary"></i> This year
+                        <i class="fas fa-square text-gray"></i> This year
                     </span>
 
                     <span>
-                        <i class="fas fa-square text-gray"></i> Last year
+                        <i class="fas fa-square text-info"></i> Last year
                     </span>
                 </div>
             </div>
@@ -115,11 +115,11 @@
 
                 <div class="d-flex flex-row justify-content-end">
                     <span class="mr-2">
-                        <i class="fas fa-square text-primary"></i> This year
+                        <i class="fas fa-square text-gray"></i> This year
                     </span>
 
                     <span>
-                        <i class="fas fa-square text-gray"></i> Last year
+                        <i class="fas fa-square text-success"></i> Last year
                     </span>
                 </div>
             </div>

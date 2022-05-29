@@ -9,7 +9,6 @@ Resource
         Ttile
         Author
         Description
-        Type [Free, Sell]
         Source [File, Hyperlink]
         Category
         Total pages
@@ -20,7 +19,6 @@ Resource
         Ttile
         Description
         Duration
-        Type [Free, Sell]
         Source [File, Hyperlink]
         Category
         Cover
@@ -31,7 +29,6 @@ Resource
         Description
         Author
         Duration
-        Type [Free, Sell]
         Source [File, Hyperlink]
         Category
         Cover
@@ -42,7 +39,6 @@ Resource
         Description
         Speaker
         Duration
-        Type [Free, Sell]
         Source [File, Hyperlink]
         Category
         Cover
@@ -52,7 +48,6 @@ Resource
         Ttile
         Description
         Author
-        Type [Free, Sell]
         Source [File, Hyperlink]
         Category
         Cover
@@ -64,7 +59,6 @@ Resource
         Singer
         Duration
         Year
-        Type [Free, Sell]
         Source [File, Hyperlink]
         Category
         Cover
