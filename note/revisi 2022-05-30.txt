@@ -1,0 +1,34 @@
+nowrap button
+transaction
+	tambah transaciton id 
+	filter + [group, individual] [done]
+	Summary 1 [done]
+	transacion invoice
+	amount dolar ke atas dolar format[done]
+	table full [done]
+	hapus btn tambah [done]
+	action cuman detail modal invoice
+	tambah column group atau individual[done]
+
+nomor diahpus
+	categories [done]
+	transaction [done]
+
+Categories [done]
+	dibuat 1 baris [done]
+	nowrap [done]
+	
+Tag muliple select [done]
+
+Resorce [done]
+	nowrap [done]
+	pake summernote [done]
+	Music summary di tambah singer, status,	 [done]
+
+Pricing Feature di pindah ke modal
+
+Member
+	Tambah email, phone
+	Product > 1, yg terbaru di tampilkan yang lama di modal
+
+Angka di table taruh sebelah kanan

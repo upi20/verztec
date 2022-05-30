@@ -82,34 +82,3 @@ Transaction
 Member
 
 Create User Role
-
-Revisi
-    Type
-    Upload full
-    upload trial
-    Tag
-    Status [Publish, Simpan]
-
-    Viewer
-    Save
-
-    // =================== per module
-    filter
-    summery
-
-    Member
-    Individu
-    Organisasi > Individu
-        Paket
-        Total Member
-        
-    Buat data faker minimal 10 record
-    
-
-Pricing [done]
-    Title
-    Description
-    Price
-    Duration
-    Duration Text
-    Features[]

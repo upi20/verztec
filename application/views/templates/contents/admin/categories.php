@@ -4,10 +4,10 @@
             <h3 class="card-title">List <?= $title ?></h3>
             <div class="row">
                 <div class="col-md-12">
-                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-sm"><i class="fas fa-file-pdf"></i> Export PDF</a>
-                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Export Excel</a>
-                    <!-- <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button>
+                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Export PDF</a>
+                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-xs"><i class="fas fa-file-excel"></i> Export Excel</a>
+                    <!-- <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button>
                 </div>
             </div>
 
@@ -18,8 +18,7 @@
         <table id="dt_basic" class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th style="max-width: 40px;">NO</th>
-                    <th>Action</th>
+                    <th style="max-width:100px">Action</th>
                     <th>Name</th>
                     <th>Description</th>
                     <th>Used</th>
@@ -27,49 +26,46 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>
+                    <td class="nowrap">
 
-                        <button class="btn btn-primary btn-sm nowrap my-1">
+                        <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
                             <i class="fas fa-edit"></i> Edit
                         </button>
-                        <button class="btn btn-danger btn-sm nowrap my-1">
+                        <button class="btn btn-danger btn-xs">
                             <i class="fas fa-trash"></i> Delete
                         </button>
                     </td>
-                    <td>Religion</td>
-                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
-                    <td>900</td>
+                    <td class="nowrap">Religion</td>
+                    <td class="nowrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
+                    <td class="nowrap">900</td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>
+                    <td class="nowrap">
 
-                        <button class="btn btn-primary btn-sm nowrap my-1">
+                        <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
                             <i class="fas fa-edit"></i> Edit
                         </button>
-                        <button class="btn btn-danger btn-sm nowrap my-1">
+                        <button class="btn btn-danger btn-xs">
                             <i class="fas fa-trash"></i> Delete
                         </button>
                     </td>
-                    <td>Education</td>
-                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
-                    <td>300</td>
+                    <td class="nowrap">Education</td>
+                    <td class="nowrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
+                    <td class="nowrap">300</td>
                 </tr>
                 <tr>
-                    <td>3</td>
-                    <td>
+                    <td class="nowrap">
 
-                        <button class="btn btn-primary btn-sm nowrap my-1">
+                        <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
                             <i class="fas fa-edit"></i> Edit
                         </button>
-                        <button class="btn btn-danger btn-sm nowrap my-1">
+                        <button class="btn btn-danger btn-xs">
                             <i class="fas fa-trash"></i> Delete
                         </button>
                     </td>
-                    <td>Journey</td>
-                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
-                    <td>500</td>
+                    <td class="nowrap">Journey</td>
+                    <td class="nowrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum tenetur doloremque consequuntur, aperiam eaque ducimus magni voluptas doloribus dicta autem obcaecati eveniet? Obcaecati laboriosam ipsum necessitatibus illum, eum atque!</td>
+                    <td class="nowrap">500</td>
                 </tr>
             </tbody>
         </table>
@@ -78,47 +74,25 @@
 </div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog">
         <form id="form" enctype="multipart/form-data">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel"></h4>
+                    <h4 class="modal-title" id="myModalLabel">Add New Category</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="id" id="id">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required />
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required />
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="nama">No Urut</label>
-                                <input type="number" class="form-control" id="no_urut" name="no_urut" placeholder="No Urut" required />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="status">Status</label>
-                                <select class="form-control" id="status" name="status" required>
-                                    <option value="">Pilih Status</option>
-                                    <option value="1">Aktif</option>
-                                    <option value="2">Tidak Aktif</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" class="summernote"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -136,8 +110,8 @@
 
 <!-- Modal -->
 <div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog">
+        <div class=" modal-content">
             <form id="importExcel" method="post" enctype="multipart/form-data" action="<?= base_url() ?>partner/posisi/import_excel" id="form-import">
                 <div class="modal-header">
                     <h3 class="modal-title custom-font">Import Data</h3>

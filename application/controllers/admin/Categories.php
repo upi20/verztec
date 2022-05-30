@@ -11,7 +11,7 @@ class Categories extends Render_Controller
         $this->title = "Categories";
         $this->content = 'admin/categories';
         $this->navigation = ['Categories'];
-        $this->plugins = ['chartjs', 'datatables'];
+        $this->plugins = ['chartjs', 'datatables', 'summernote'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';

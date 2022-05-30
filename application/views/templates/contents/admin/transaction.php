@@ -13,6 +13,13 @@
                     </select>
                 </div>
                 <div class="form-group  mb-lg-0 ml-lg-2">
+                    <select class="form-control select2" style=" min-width:150px" value="" style="width: 100%;">
+                        <option value="">Member Type</option>
+                        <option value="">Individual</option>
+                        <option value="">Organization</option>
+                    </select>
+                </div>
+                <div class="form-group  mb-lg-0 ml-lg-2">
                     <button type="button" class="btn btn-info btn" id="btn-filter" style="width: 100%;"><i class="fas fa-search"></i> Search</button>
                 </div>
                 <div class="ml-lg-2">
@@ -63,10 +70,19 @@
     </div>
     <div class="col-md-2 col-sm-6 col-12">
         <div class="info-box">
-            <span class="info-box-icon bg-secondary"><i class="fas fa-dollar-sign"></i></span>
+            <span class="info-box-icon bg-primary"><i class="fas fa-users"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Revenue</span>
-                <span class="info-box-number">$10000</span>
+                <span class="info-box-text">Organization</span>
+                <span class="info-box-number">119</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-6 col-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-secondary"><i class="fas fa-user"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Individual</span>
+                <span class="info-box-number">891</span>
             </div>
         </div>
     </div>
@@ -78,10 +94,10 @@
             <h3 class="card-title">List <?= $title ?></h3>
             <div class="row">
                 <div class="col-md-12">
-                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-sm"><i class="fas fa-file-pdf"></i> Export PDF</a>
-                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Export Excel</a>
-                    <!-- <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button>
+                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Export PDF</a>
+                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-xs"><i class="fas fa-file-excel"></i> Export Excel</a>
+                    <!-- <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
+                    <!-- <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button> -->
                 </div>
             </div>
 
@@ -93,13 +109,15 @@
             <thead>
                 <tr>
                     <th style="max-width: 40px;">NO</th>
-                    <th>Action</th>
-                    <th>Status</th>
-                    <th>Date</th>
-                    <th>Member</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                    <th>Product</th>
+                    <th class="nowrap">Action</th>
+                    <th class="nowrap">Status</th>
+                    <th class="nowrap">Transaction Id</th>
+                    <th class="nowrap">Date</th>
+                    <th class="nowrap">Member Name</th>
+                    <th class="nowrap">Member Type</th>
+                    <th class="nowrap">Description</th>
+                    <th class="nowrap">Amount ($)</th>
+                    <th class="nowrap">Product</th>
                 </tr>
             </thead>
 
@@ -124,21 +142,26 @@
 
                 ?>
                     <tr>
-                        <td><?= $d->id ?></td>
-                        <td>
-                            <button class="btn btn-primary btn-sm nowrap my-1" data-toggle="modal" data-target="#myModal">
+                        <td class="nowrap"><?= $d->id ?></td>
+                        <td class="nowrap">
+                            <!-- <button class="btn btn-primary btn-xs " data-toggle="modal" data-target="#myModal">
                                 <i class="fas fa-edit"></i> Edit
-                            </button>
-                            <button class="btn btn-danger btn-sm nowrap my-1">
+                            </button> -->
+                            <!-- <button class="btn btn-danger btn-xs ">
                                 <i class="fas fa-trash"></i> Delete
+                            </button> -->
+                            <button class="btn btn-info btn-xs " data-toggle="modal" data-target="#myModal">
+                                <i class="fas fa-eye"></i> View
                             </button>
                         </td>
-                        <td><?= $status ?></td>
-                        <td><?= $d->datetime ?></td>
-                        <td><?= $d->member ?></td>
-                        <td><?= $d->description ?></td>
-                        <td class="text-right">$<?= $d->amount ?></td>
-                        <td><?= $d->product ?></td>
+                        <td class="nowrap"><?= $status ?></td>
+                        <td class="nowrap"><?= $d->transaction_id ?></td>
+                        <td class="nowrap"><?= '2022' . '-' . explode('-', (explode(' ', $d->datetime)[0]))[1] . ' ' . explode('-', (explode(' ', $d->datetime)[0]))[2] . ' ' . explode(' ', $d->datetime)[1] ?></td>
+                        <td class="nowrap"><?= $d->member ?></td>
+                        <td class="nowrap"><?= rand(0, 1) ? '<span class="badge bg-primary">Organization</span>' : '<span class="badge bg-secondary">Individual</span>' ?> </td>
+                        <td class="nowrap"><?= $d->description ?></td>
+                        <td class="nowrap text-right"><?= number_format($d->amount, 2, ".", ",") ?></td>
+                        <td class="nowrap"><?= $d->product ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -150,59 +173,64 @@
 
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <form id="form" enctype="multipart/form-data">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel"></h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <input type="hidden" name="id" id="id">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="nama">No Urut</label>
-                                <input type="number" class="form-control" id="no_urut" name="no_urut" placeholder="No Urut" required />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="status">Status</label>
-                                <select class="form-control" id="status" name="status" required>
-                                    <option value="">Pilih Status</option>
-                                    <option value="1">Aktif</option>
-                                    <option value="2">Tidak Aktif</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">
-                        Simpan
-                    </button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">
-                        Batal
-                    </button>
-                </div>
-            </div><!-- /.modal-content -->
-        </form>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Detail Transaction</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table style="width: 100%">
+                    <tr>
+                        <td class="nowrap">Transaction Id</td>
+                        <td>:</td>
+                        <td>22541a8f-8694-3cf0-805f-ff08ac78c4ea</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>:</td>
+                        <td>2022-07 19 13:06:07</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>:</td>
+                        <td><span class="badge bg-success">Success</span></td>
+                    </tr>
+                    <tr>
+                        <td>Product</td>
+                        <td>:</td>
+                        <td>YellowGreen</td>
+                    </tr>
+                    <tr>
+                        <td>Amount</td>
+                        <td>:</td>
+                        <td>$<?= number_format(150, 2, ".", ",") ?></td>
+                    </tr>
+                    <tr>
+                        <td>Member</td>
+                        <td>:</td>
+                        <td>Eveline</td>
+                    </tr>
+                    <tr>
+                        <td>Member Type</td>
+                        <td>:</td>
+                        <td><span class="badge bg-secondary">Individual</span></td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td>:</td>
+                        <td>Quos alias reprehenderit et et. Praesentium quis animi impedit quod ut adipisci officia. Vel quia quod et. Facere quibusdam id quibusdam quidem</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
