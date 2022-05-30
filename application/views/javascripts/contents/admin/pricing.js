@@ -28,12 +28,12 @@ function features(id) {
 
     datas.data.forEach(e => {
         tbody.append(`<tr>
-        <td>${e}</td>
-        <td>
-            <button class="btn btn-primary btn-sm" onclick="feature_edit(1, '${e}')">
+        <td  class="nowrap">${e}</td>
+        <td class="nowrap">
+            <button class="btn btn-primary btn-xs" onclick="feature_edit(1, '${e}')">
                 <i class="fas fa-edit"></i> Edit
             </button>
-            <button class="btn btn-danger btn-sm" onclick="delete_fun()">
+            <button class="btn btn-danger btn-xs" onclick="delete_fun()">
                 <i class="fas fa-trash"></i> Delete
             </button>
         </td>
@@ -42,12 +42,7 @@ function features(id) {
 
 
     // set datatable
-    table_html.dataTable({
-        "responsive": false,
-        "lengthChange": true,
-        "autoWidth": false,
-        "scrollX": true,
-    });
+    table_html.dataTable();
 }
 
 

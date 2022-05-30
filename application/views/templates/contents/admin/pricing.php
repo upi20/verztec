@@ -85,10 +85,10 @@ $features = [
             <h3 class="card-title">List <?= $title ?></h3>
             <div class="row">
                 <div class="col-md-12">
-                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-sm"><i class="fas fa-file-pdf"></i> Export PDF</a>
-                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Export Excel</a>
-                    <!-- <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button>
+                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Export PDF</a>
+                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-xs"><i class="fas fa-file-excel"></i> Export Excel</a>
+                    <!-- <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button>
                 </div>
             </div>
 
@@ -100,43 +100,41 @@ $features = [
             <thead>
                 <tr>
                     <th style="max-width: 40px;">NO</th>
-                    <th>Action</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Duration</th>
-                    <th>Duration Name</th>
-                    <th>Max Member</th>
-                    <th>Member</th>
-                    <th>Features</th>
-                    <th>Status</th>
+                    <th class="nowrap">Action</th>
+                    <th class="nowrap">Title</th>
+                    <th class="nowrap">Description</th>
+                    <th class="nowrap">Price</th>
+                    <th class="nowrap">Duration</th>
+                    <th class="nowrap">Duration Name</th>
+                    <th class="nowrap">Max Member</th>
+                    <th class="nowrap">Member</th>
+                    <th class="nowrap">Status</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($pricing as $price) : ?>
                     <tr>
-                        <td><?= $price['id'] ?></td>
-                        <td>
-                            <button class="btn btn-primary btn-sm">
+                        <td class="nowrap"><?= $price['id'] ?></td>
+                        <td class="nowrap">
+                            <button class="btn btn-primary btn-xs">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
-                            <button class="btn btn-danger btn-sm" onclick="delete_fun()">
+                            <button class="btn btn-danger btn-xs" onclick="delete_fun()">
                                 <i class="fas fa-trash"></i> Delete
                             </button>
-                        </td>
-                        <td><?= $price['title'] ?></td>
-                        <td><?= $price['description'] ?></td>
-                        <td>$<?= $price['price'] ?></td>
-                        <td><?= $price['duration'] ?></td>
-                        <td><?= $price['duration_name'] ?></td>
-                        <td><?= $price['member_max'] ?></td>
-                        <td><?= $price['member'] ?></td>
-                        <td>
-                            <button class="btn btn-primary btn-sm" onclick="features('<?= $price['id'] ?>')">
-                                <i class="fas fa-eye"></i>
+                            <button class="btn btn-info btn-xs" data-toggle="modal" data-target="#featuresModal" onclick="features('<?= $price['id'] ?>')">
+                                <i class="fas fa-list"></i> Features
                             </button>
                         </td>
-                        <td><?= $price['status'] ?></td>
+                        <td class="nowrap"><?= $price['title'] ?></td>
+                        <td class="nowrap"><?= $price['description'] ?></td>
+                        <td class="nowrap">$<?= number_format($price['price'], 2, ".", ",") ?></td>
+                        <td class="nowrap"><?= $price['duration'] ?></td>
+                        <td class="nowrap"><?= $price['duration_name'] ?></td>
+                        <td class="nowrap"><?= $price['member_max'] ?></td>
+                        <td class="nowrap"><?= $price['member'] ?></td>
+
+                        <td class="nowrap"><?= $price['status'] ?></td>
                     </tr>
                 <?php endforeach ?>
             </tbody>
@@ -144,66 +142,6 @@ $features = [
         <hr>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-lg-6 col-md-12">
-        <div class="card " style="display: none;" id="freature-card">
-            <div class="card-header">
-                <h3 class="card-title">
-                    <i class="fas fa-list"></i>
-                    Features
-                </h3>
-
-                <!-- tools card -->
-                <div class="card-tools">
-                    <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card-body">
-                <form action="" class="d-lg-flex flex-lg-row justify-content-between">
-
-                    <input type="hidden" class="form-control" id="feature-id" />
-                    <input type="text" class="form-control" id="feature" name="feature" placeholder="Add Feature" required />
-
-                    <button type="reset" class="btn btn-primary ml-lg-2 nowrap" id="btn-feature-save">
-                        <i class="fas fa-save"></i> Save
-                    </button>
-
-                    <button type="button" class="btn btn-info ml-lg-2 nowrap" id="btn-feature-update" onclick="feature_cancel()" style="display: none;">
-                        <i class="fas fa-save"></i> Update
-                    </button>
-
-                    <button type="button" class="btn btn-danger ml-lg-2 nowrap" id="btn-feature-cancel" onclick="feature_cancel()" style="display: none;">
-                        <i class="fas fa-times"></i>
-                    </button>
-
-                </form>
-                <hr>
-                <h3 class="card-title">List Feature</h3>
-                <br>
-                <table id="dt_feature" class="table table-bordered table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <td>Feature</td>
-                            <td>Action</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!--The calendar -->
-    </div>
-</div>
-<!-- /.card -->
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -271,14 +209,64 @@ $features = [
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">
-                        Simpan
+                        Save
                     </button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">
-                        Batal
+                        Close
                     </button>
                 </div>
             </div><!-- /.modal-content -->
         </form>
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="featuresModal" tabindex="-1" role="dialog" aria-labelledby="featuresModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="featuresModalLabel">Features</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" class="d-lg-flex flex-lg-row justify-content-between">
+
+                    <input type="hidden" class="form-control" id="feature-id" />
+                    <input type="text" class="form-control" id="feature" name="feature" placeholder="Add Feature" required />
+
+                    <button type="reset" class="btn btn-primary ml-lg-2 nowrap" id="btn-feature-save">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+
+                    <button type="button" class="btn btn-info ml-lg-2 nowrap" id="btn-feature-update" onclick="feature_cancel()" style="display: none;">
+                        <i class="fas fa-save"></i> Update
+                    </button>
+
+                    <button type="button" class="btn btn-danger ml-lg-2 nowrap" id="btn-feature-cancel" onclick="feature_cancel()" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                </form>
+                <hr>
+                <table id="dt_feature" class="table table-bordered table-striped table-hover" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <td class="nowrap">Feature</td>
+                            <td class="nowrap">Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
@@ -296,9 +284,9 @@ $features = [
                     <input type="file" name="file" id="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
                 </div>
                 <div class="modal-footer">
-                    <button id="clickImport" type="submit" class="btn btn-success btn-ef btn-ef-3 btn-ef-3c"><i class="fa fa-arrow-right"></i> Simpan</button>
+                    <button id="clickImport" type="submit" class="btn btn-success btn-ef btn-ef-3 btn-ef-3c"><i class="fa fa-arrow-right"></i> Save</button>
 
-                    <button class="btn btn-lightred btn-ef btn-ef-4 btn-ef-4c" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Batal</button>
+                    <button class="btn btn-lightred btn-ef btn-ef-4 btn-ef-4c" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Close</button>
                 </div>
             </form>
         </div>
