@@ -11,7 +11,7 @@ class Audiobooks extends Render_Controller
         $this->title = "Audiobooks";
         $this->content = 'admin/resource/audiobooks';
         $this->navigation = ['Audiobooks'];
-        $this->plugins = ['chartjs', 'datatables', 'select2'];
+        $this->plugins = ['chartjs', 'datatables', 'select2', 'summernote'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';

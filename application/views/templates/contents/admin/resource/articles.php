@@ -16,12 +16,12 @@
                     <select class="form-control select2" style=" min-width:150px" value="" style="width: 100%;">
                         <option value="">Select Soruce</option>
                         <option value="">Hyperlink</option>
-                        <option value="">File</option>
+                        <option value="">Write</option>
                     </select>
                 </div>
                 <div class="form-group  mb-lg-0 ml-lg-2">
-                    <select class="form-control select2" style=" min-width:150px" value="" style="width: 100%;">
-                        <option value="">Select Tag</option>
+                    Tags:
+                    <select class="form-control select2" multiple style=" min-width:150px" value="" style="width: 100%;" aria-placeholder="Select Tag">
                         <option value="">Religion</option>
                         <option value="">Education</option>
                         <option value="">Journey</option>
@@ -53,25 +53,52 @@
             <span class="info-box-icon bg-info"><i class="fas fa-book"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Total Article</span>
-                <span class="info-box-number">1000 Article</span>
+                <span class="info-box-number">1000</span>
             </div>
         </div>
     </div>
     <div class="col-md-2 col-sm-6 col-12">
         <div class="info-box">
-            <span class="info-box-icon bg-info"><i class="fas fa-project-diagram"></i></span>
+            <span class="info-box-icon bg-secondary"><i class="fas fa-save"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Total Category</span>
-                <span class="info-box-number">3 Category</span>
+                <span class="info-box-text">Saved</span>
+                <span class="info-box-number">25</span>
             </div>
         </div>
     </div>
     <div class="col-md-2 col-sm-6 col-12">
         <div class="info-box">
-            <span class="info-box-icon bg-info"><i class="fas fa-hashtag"></i></span>
+            <span class="info-box-icon bg-primary"><i class="fas fa-upload"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Total Tag</span>
-                <span class="info-box-number">3 Tag</span>
+                <span class="info-box-text">Publish</span>
+                <span class="info-box-number">960</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-6 col-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-danger"><i class="fas fa-times"></i></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Takedown</span>
+                <span class="info-box-number">15</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-6 col-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-info"><i class="fas fa-pencil-alt"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Write</span>
+                <span class="info-box-number">975</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-6 col-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-primary"><i class="fas fa-link"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Hyperlink</span>
+                <span class="info-box-number">25</span>
             </div>
         </div>
     </div>
@@ -83,10 +110,10 @@
             <h3 class="card-title">List <?= $title ?></h3>
             <div class="row">
                 <div class="col-md-12">
-                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-sm"><i class="fas fa-file-pdf"></i> Export PDF</a>
-                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Export Excel</a>
-                    <!-- <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Tambah</button>
+                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Export PDF</a>
+                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-xs"><i class="fas fa-file-excel"></i> Export Excel</a>
+                    <!-- <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button>
                 </div>
             </div>
 
@@ -103,8 +130,8 @@
                     <th class="nowrap">Title</th>
                     <th class="nowrap">Author</th>
                     <th class="nowrap">Description</th>
-                    <th class="nowrap">File Full</th>
-                    <th class="nowrap">File Trial</th>
+                    <th class="nowrap">Article Full</th>
+                    <th class="nowrap">Article Trial</th>
                     <th class="nowrap">Source</th>
                     <th class="nowrap">Category</th>
                     <th class="nowrap">Liked</th>
@@ -125,7 +152,7 @@
                             $status = '<span class="badge bg-success">Publish</span>';
                             break;
                         case 2:
-                            $status = '<span class="badge bg-danger">Takedown</span>';
+                            $status = '<span class="badge bg-warning">Takedown</span>';
                             break;
 
                         default:
@@ -135,30 +162,30 @@
 
                 ?>
                     <tr>
-                        <td><?= $d->id ?></td>
-                        <td>
-                            <button class="btn btn-primary btn-sm nowrap my-1">
+                        <td class="nowrap"><?= $d->id ?></td>
+                        <td class="nowrap">
+                            <button class="btn btn-primary btn-xs nowrap my-1" data-toggle="modal" data-target="#myModal">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
-                            <button class="btn btn-danger btn-sm nowrap my-1">
+                            <button class="btn btn-danger btn-xs nowrap my-1" onclick="delete_fun()">
                                 <i class="fas fa-trash"></i> Delete
                             </button>
                         </td>
-                        <td><?= $status ?></td>
-                        <td><?= $d->title ?></td>
-                        <td><?= $d->author ?></td>
-                        <td><?= $d->description ?></td>
-                        <td>
-                            <button class="btn btn-info btn-sm">
+                        <td class="nowrap"><?= $status ?></td>
+                        <td class="nowrap"><?= $d->title ?></td>
+                        <td class="nowrap"><?= $d->author ?></td>
+                        <td class="nowrap"><?= $d->description ?></td>
+                        <td class="nowrap">
+                            <button class="btn btn-info btn-xs">
                                 <i class="fas fa-eye"></i>
                             </button>
                         </td>
-                        <td>
-                            <button class="btn btn-info btn-sm">
+                        <td class="nowrap">
+                            <button class="btn btn-info btn-xs">
                                 <i class="fas fa-eye"></i>
                             </button>
                         </td>
-                        <td>
+                        <td class="nowrap">
                             <!-- <i class="fas fa-file-alt"></i>
                             <i class="fas fa-external-link"></i>
                             <i class="fas fa-question"></i> -->
@@ -168,7 +195,7 @@
                                     break;
 
                                 case 'File':
-                                    echo '<span class="badge bg-success">File</span>';
+                                    echo '<span class="badge bg-success">Write</span>';
                                     break;
 
                                 default:
@@ -177,14 +204,14 @@
                                     break;
                             } ?>
                         </td>
-                        <td><?= $d->category ?></td>
-                        <td><?= $d->liked ?></td>
-                        <td><?= $d->saved ?></td>
-                        <td><?= $d->seen ?></td>
-                        <td><?= $d->subscriber ?></td>
-                        <td><?= $d->tags ?></td>
-                        <td>
-                            <button class="btn btn-info btn-sm">
+                        <td class="nowrap"><?= $d->category ?></td>
+                        <td class="nowrap"><?= $d->liked ?></td>
+                        <td class="nowrap"><?= $d->saved ?></td>
+                        <td class="nowrap"><?= $d->seen ?></td>
+                        <td class="nowrap"><?= $d->subscriber ?></td>
+                        <td class="nowrap"><?= $d->tags ?></td>
+                        <td class="nowrap">
+                            <button class="btn btn-info btn-xs">
                                 <i class="fas fa-eye"></i>
                             </button>
                         </td>
@@ -197,48 +224,88 @@
 </div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-lg">
         <form id="form" enctype="multipart/form-data">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel"></h4>
+                    <h4 class="modal-title" id="myModalLabel">Add New Article</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="id" id="id">
-
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required />
+                                <label for="titile">Title</label>
+                                <input type="text" class="form-control" id="titile" name="titile" placeholder="Article Title" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="author">Author</label>
+                                <input type="text" class="form-control" id="author" name="author" placeholder="Author" required />
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="nama">No Urut</label>
-                                <input type="number" class="form-control" id="no_urut" name="no_urut" placeholder="No Urut" required />
-                            </div>
-                        </div>
-                    </div>
+                    <label for="description">Description</label>
+                    <textarea id="description" class="summernote"></textarea>
 
                     <div class="row">
+                        <div class="col-md-12 file">
+                            <label for="article_full">Article Full</label>
+                            <textarea id="article_full" class="summernote"></textarea>
+                        </div>
+                        <div class="col-md-12 file">
+                            <label for="article_trial">Article Trial</label>
+                            <textarea id="article_trial" class="summernote"></textarea>
+                        </div>
+                        <div class="col-md-6 url">
+                            <div class="form-group">
+                                <label for="url_full">Url Full</label>
+                                <input type="url" class="form-control" id="url_full" name="url_full" placeholder="Url file full" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6 url">
+                            <div class="form-group">
+                                <label for="url_trial">Url Trial</label>
+                                <input type="url" class="form-control" id="url_trial" name="url_trial" placeholder="Url file trial" required />
+                            </div>
+                        </div>
                         <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="source">Soruce</label>
+                                <select class="form-control" id="source" name="source" required>
+                                    <option value="file">Write</option>
+                                    <option value="hyperlink">Hyperlink</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="tags">Tags</label>
+                                <select id="tags" class="form-control select2" multiple value="" style="width: 100%;" aria-placeholder="Select Tag">
+                                    <option value="">Religion</option>
+                                    <option value="">Education</option>
+                                    <option value="">Journey</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="status">Status</label>
                                 <select class="form-control" id="status" name="status" required>
-                                    <option value="">Pilih Status</option>
-                                    <option value="1">Aktif</option>
-                                    <option value="2">Tidak Aktif</option>
+                                    <option value="">Select Status</option>
+                                    <option value="">Saved</option>
+                                    <option value="">Publish</option>
+                                    <option value="">Takedown</option>
                                 </select>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">

@@ -11,7 +11,7 @@ class Articles extends Render_Controller
         $this->title = "Articles";
         $this->content = 'admin/resource/articles';
         $this->navigation = ['Articles'];
-        $this->plugins = ['chartjs', 'datatables'];
+        $this->plugins = ['chartjs', 'datatables', 'summernote', 'select2'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';

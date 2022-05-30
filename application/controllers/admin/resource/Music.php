@@ -11,7 +11,7 @@ class Music extends Render_Controller
         $this->title = "Music";
         $this->content = 'admin/resource/music';
         $this->navigation = ['Music'];
-        $this->plugins = ['chartjs', 'datatables', 'select2'];
+        $this->plugins = ['chartjs', 'datatables', 'summernote', 'select2'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';

@@ -1,0 +1,92 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <form id="form" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Add Book</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="id" id="id">
+
+                    <div class="form-group">
+                        <label for="titile">Title</label>
+                        <input type="text" class="form-control" id="titile" name="titile" placeholder="Book Title" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" class="form-control" id="author" name="author" placeholder="Author" required />
+                    </div>
+
+                    <label for="description">Description</label>
+                    <textarea id="description" class="summernote"></textarea>
+
+                    <div class="form-group">
+                        <label for="file_full">File Full</label>
+                        <input type="file" class="form-control" id="file_full" name="file_full" placeholder="file_full" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file_trial">File Trial</label>
+                        <input type="file" class="form-control" id="file_trial" name="file_trial" placeholder="file_trial" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="url_full">Url Full</label>
+                        <input type="url" class="form-control" id="url_full" name="url_full" placeholder="url_full" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="url_trial">Url Trial</label>
+                        <input type="url" class="form-control" id="url_trial" name="url_trial" placeholder="url_trial" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="titile">Total Page</label>
+                        <input type="number" class="form-control" id="titile" name="titile" placeholder="Total Page" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Soruce</label>
+                        <select class="form-control" id="status" name="status" required>
+                            <option value="">Select Soruce</option>
+                            <option value="">File</option>
+                            <option value="">Hyperlink</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group  mb-lg-0 ml-lg-2">
+                        <label for="tags">Tags</label>
+                        <select id="tags" class="form-control select2" multiple value="" style="width: 100%;" aria-placeholder="Select Tag">
+                            <option value="">Religion</option>
+                            <option value="">Education</option>
+                            <option value="">Journey</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" id="status" name="status" required>
+                            <option value="">Select Status</option>
+                            <option value="">Saved</option>
+                            <option value="">Publish</option>
+                            <option value="">Takedown</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">
+                        Simpan
+                    </button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        Batal
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </form>
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

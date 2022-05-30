@@ -11,7 +11,7 @@ class Video extends Render_Controller
         $this->title = "Video";
         $this->content = 'admin/resource/video';
         $this->navigation = ['Video'];
-        $this->plugins = ['chartjs', 'datatables', 'select2'];
+        $this->plugins = ['chartjs', 'datatables', 'select2', 'summernote'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';
