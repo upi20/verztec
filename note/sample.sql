@@ -101,6 +101,7 @@ CREATE TABLE `article` (
 
 CREATE TABLE `transaction` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`transaction_id` VARCHAR(255) NOT NULL,
 	`status` int(1) NOT NULL,
 	`datetime` DATETIME NOT NULL,
 	`member` VARCHAR(255) NOT NULL,
@@ -113,6 +114,8 @@ CREATE TABLE `transaction` (
 CREATE TABLE `individual` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`status` int(1) NOT NULL,
+	`email` VARCHAR(255) NOT NULL,
+	`phone` VARCHAR(255) NOT NULL,
 	`name` VARCHAR(255) NOT NULL,
 	`address` text NOT NULL,
 	`city` text NOT NULL,
@@ -124,6 +127,8 @@ CREATE TABLE `individual` (
 
 CREATE TABLE `organization` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
+		`email` VARCHAR(255) NOT NULL,
+	`phone` VARCHAR(255) NOT NULL,
 	`filled` int(11) NOT NULL,
 	`max` int(11) NOT NULL,
 	`name` VARCHAR(255) NOT NULL,

@@ -3,7 +3,7 @@ $(document).ready(function () {
         "responsive": true,
         "lengthChange": false,
         "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     });
 
     $table.buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');

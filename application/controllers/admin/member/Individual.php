@@ -11,7 +11,7 @@ class Individual extends Render_Controller
         $this->title = "Individual";
         $this->content = 'admin/member/individual';
         $this->navigation = ['Individual'];
-        $this->plugins = ['chartjs', 'datatables', 'select2'];
+        $this->plugins = ['chartjs', 'datatables', 'select2', 'summernote'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';

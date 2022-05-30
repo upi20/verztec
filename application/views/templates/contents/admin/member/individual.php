@@ -1,5 +1,30 @@
+<!-- filter -->
+<div class="card card-info card-outline" id="filter">
+    <div class="card-header">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-end  align-items-star w-100 flex-md-row flex-column">
+                <h3 class="card-title align-self-center">Filter : </h3>
+                <div class="form-group  mb-lg-0 ml-lg-2">
+                    <select class="form-control select2" style=" min-width:150px" value="" style="width: 100%;">
+                        <option value="">Select Packet</option>
+                        <option value="">Free</option>
+                        <option value="">Premium</option>
+                        <option value="">Silver</option>
+                        <option value="">Gold</option>
+                    </select>
+                </div>
+                <div class="form-group  mb-lg-0 ml-lg-2">
+                    <button type="button" class="btn btn-info btn" id="btn-filter" style="width: 100%;"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div class="ml-lg-2">
+                    <a class="btn btn-warning btn" href="" style="width: 100%;"><i class="fas fa-undo"></i> Reset filter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row">
-    <div class="col-md-2 col-sm-6 col-12">
+    <div class="col-md-3 col-sm-7 col-12">
         <div class="info-box">
             <span class="info-box-icon bg-info"><i class="fas fa-receipt"></i></span>
             <div class="info-box-content">
@@ -17,9 +42,9 @@
             </div>
         </div>
     </div>
-    <div class="col-md-2 col-sm-6 col-12">
+    <div class="col-md-3 col-sm-7 col-12">
         <div class="info-box">
-            <span class="info-box-icon bg-seconddary"><i class="fas fa-check"></i></span>
+            <span class="info-box-icon bg-secondary"><i class="fas fa-check"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Premium</span>
                 <span class="info-box-number">150</span>
@@ -35,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-2 col-sm-6 col-12">
+    <div class="col-md-2 col-sm-7 col-12">
         <div class="info-box">
             <span class="info-box-icon bg-info"><i class="fas fa-pause"></i></span>
             <div class="info-box-content">
@@ -52,10 +77,10 @@
             <h3 class="card-title">List <?= $title ?></h3>
             <div class="row">
                 <div class="col-md-12">
-                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-sm"><i class="fas fa-file-pdf"></i> Export PDF</a>
-                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-sm"><i class="fas fa-file-excel"></i> Export Excel</a>
-                    <!-- <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button>
+                    <a href="<?= base_url() ?>partner/posisi/export_pdf" class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Export PDF</a>
+                    <a href="<?= base_url() ?>partner/posisi/export_excel" class="btn btn-success btn-xs"><i class="fas fa-file-excel"></i> Export Excel</a>
+                    <!-- <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#import"><i class="fas fa-file-excel"></i> <span>Import Excel</span></button> -->
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" id="btn-tambah"><i class="fa fa-plus"></i> Add</button>
                 </div>
             </div>
 
@@ -67,12 +92,14 @@
             <thead>
                 <tr>
                     <th style="max-width: 40px;">NO</th>
-                    <th>Action</th>
-                    <th>Name</th>
-                    <th>City</th>
-                    <th>Address</th>
-                    <th>Since</th>
-                    <th>Product</th>
+                    <th class="nowrap">Action</th>
+                    <th class="nowrap">Name</th>
+                    <th class="nowrap">Email</th>
+                    <th class="nowrap">Phone Number</th>
+                    <th class="nowrap">City</th>
+                    <th class="nowrap">Address</th>
+                    <th class="nowrap">Since</th>
+                    <th class="nowrap">Product</th>
                 </tr>
             </thead>
 
@@ -80,20 +107,22 @@
 
                 <?php foreach ($dataset as $d) : ?>
                     <tr>
-                        <td><?= $d->id ?></td>
-                        <td>
-                            <button class="btn btn-primary btn-sm nowrap my-1" data-toggle="modal" data-target="#myModal">
+                        <td class="nowrap"><?= $d->id ?></td>
+                        <td class="nowrap">
+                            <button class="btn btn-primary btn-xs nowrap my-1" data-toggle="modal" data-target="#myModal">
                                 <i class="fas fa-edit"></i> Edit
                             </button>
-                            <button class="btn btn-danger btn-sm nowrap my-1">
+                            <button class="btn btn-danger btn-xs nowrap my-1" onclick="delete_fun()">
                                 <i class="fas fa-trash"></i> Delete
                             </button>
                         </td>
-                        <td><?= $d->city ?></td>
-                        <td><?= $d->name ?></td>
-                        <td><?= $d->address ?></td>
-                        <td><?= $d->since ?></td>
-                        <td><?= $d->packet ?></td>
+                        <td class="nowrap"><?= $d->name ?></td>
+                        <td class="nowrap"><?= $d->email ?></td>
+                        <td class="nowrap"><?= $d->phone ?></td>
+                        <td class="nowrap"><?= $d->city ?></td>
+                        <td class="nowrap"><?= $d->address ?></td>
+                        <td class="nowrap"><?= '2022' . '-' . explode('-', (explode(' ', $d->since)[0]))[1] . ' ' . explode('-', (explode(' ', $d->since)[0]))[2] . ' ' . explode(' ', $d->since)[1] ?></td>
+                        <td class="nowrap"><?= $d->packet ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -105,11 +134,11 @@
 
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog">
         <form id="form" enctype="multipart/form-data">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel"></h4>
+                    <h4 class="modal-title" id="myModalLabel">Add New Member</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -117,43 +146,49 @@
                 <div class="modal-body">
                     <input type="hidden" name="id" id="id">
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required />
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required />
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="nama">No Urut</label>
-                                <input type="number" class="form-control" id="no_urut" name="no_urut" placeholder="No Urut" required />
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="status">Status</label>
-                                <select class="form-control" id="status" name="status" required>
-                                    <option value="">Pilih Status</option>
-                                    <option value="1">Aktif</option>
-                                    <option value="2">Tidak Aktif</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="number">Phone Number</label>
+                        <input type="number" class="form-control" id="number" name="number" placeholder="Phone Number" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" name="city" placeholder="Full Name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" name="city" placeholder="Full Name" required />
+                    </div>
+                    <label for="address">Address</label>
+                    <textarea id="address" class="summernote"></textarea>
+
+                    <div class="form-group">
+                        <label for="packet">Packet</label>
+                        <select class="form-control select2" value="" id="packet" style="width: 100%;">
+                            <option value="">Select Packet</option>
+                            <option value="">Premium</option>
+                            <option value="">Silver</option>
+                            <option value="">Gold</option>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">
-                        Simpan
+                        Save
                     </button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">
-                        Batal
+                        Cancel
                     </button>
                 </div>
             </div><!-- /.modal-content -->
@@ -175,9 +210,9 @@
                     <input type="file" name="file" id="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
                 </div>
                 <div class="modal-footer">
-                    <button id="clickImport" type="submit" class="btn btn-success btn-ef btn-ef-3 btn-ef-3c"><i class="fa fa-arrow-right"></i> Simpan</button>
+                    <button id="clickImport" type="submit" class="btn btn-success btn-ef btn-ef-3 btn-ef-3c"><i class="fa fa-arrow-right"></i> Save</button>
 
-                    <button class="btn btn-lightred btn-ef btn-ef-4 btn-ef-4c" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Batal</button>
+                    <button class="btn btn-lightred btn-ef btn-ef-4 btn-ef-4c" data-dismiss="modal"><i class="fa fa-arrow-left"></i> Cancel</button>
                 </div>
             </form>
         </div>

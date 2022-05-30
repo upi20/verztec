@@ -11,7 +11,7 @@ class Organization extends Render_Controller
         $this->title = "Organization";
         $this->content = 'admin/member/organization';
         $this->navigation = ['Organization'];
-        $this->plugins = ['chartjs', 'datatables', 'select2'];
+        $this->plugins = ['chartjs', 'datatables', 'select2', 'summernote'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';
@@ -32,7 +32,7 @@ class Organization extends Render_Controller
         $this->title =  $name . " | Organization";
         $this->content = 'admin/member/organization_member';
         $this->navigation = ['Organization'];
-        $this->plugins = ['chartjs', 'datatables', 'select2'];
+        $this->plugins = ['chartjs', 'datatables', 'select2', 'summernote'];
 
         // Breadcrumb setting
         $this->breadcrumb_1 = 'Home';

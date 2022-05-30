@@ -25,10 +25,9 @@ Resorce [done]
 	pake summernote [done]
 	Music summary di tambah singer, status,	 [done]
 
-Pricing Feature di pindah ke modal
+Pricing Feature di pindah ke modal [done]
+Angka di table taruh sebelah kanan[done]
 
 Member
-	Tambah email, phone
-	Product > 1, yg terbaru di tampilkan yang lama di modal
-
-Angka di table taruh sebelah kanan
+	Tambah email, phone [done]
+	Product > 1, yg terbaru di tampilkan yang lama di modal 
