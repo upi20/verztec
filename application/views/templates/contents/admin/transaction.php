@@ -112,10 +112,11 @@
                     <th class="nowrap">Action</th>
                     <th class="nowrap">Status</th>
                     <th class="nowrap">Transaction Id</th>
-                    <th class="nowrap">Date</th>
+                    <th class="nowrap">Start Date</th>
+                    <th class="nowrap">End Date</th>
                     <th class="nowrap">Member Name</th>
                     <th class="nowrap">Member Type</th>
-                    <th class="nowrap">Description</th>
+                    <th class="nowrap">Status</th>
                     <th class="nowrap">Amount ($)</th>
                     <th class="nowrap">Product</th>
                 </tr>
@@ -156,7 +157,8 @@
                         </td>
                         <td class="nowrap"><?= $status ?></td>
                         <td class="nowrap"><?= $d->transaction_id ?></td>
-                        <td class="nowrap"><?= '2022' . '-' . explode('-', (explode(' ', $d->datetime)[0]))[1] . ' ' . explode('-', (explode(' ', $d->datetime)[0]))[2] . ' ' . explode(' ', $d->datetime)[1] ?></td>
+                        <td class="nowrap"><?= '2022' . '-' . explode('-', (explode(' ', $d->datetime)[0]))[1] . '-' . (explode('-', (explode(' ', $d->datetime)[0]))[2] - 1) . ' ' . explode(' ', $d->datetime)[1] ?></td>
+                        <td class="nowrap"><?= '2022' . '-' . explode('-', (explode(' ', $d->datetime)[0]))[1] . '-' . (explode('-', (explode(' ', $d->datetime)[0]))[2] + 1) . ' ' . explode(' ', $d->datetime)[1] ?></td>
                         <td class="nowrap"><?= $d->member ?></td>
                         <td class="nowrap"><?= rand(0, 1) ? '<span class="badge bg-primary">Organization</span>' : '<span class="badge bg-secondary">Individual</span>' ?> </td>
                         <td class="nowrap"><?= $d->description ?></td>
@@ -189,9 +191,14 @@
                         <td>22541a8f-8694-3cf0-805f-ff08ac78c4ea</td>
                     </tr>
                     <tr>
-                        <td>Date</td>
+                        <td>Start Date</td>
                         <td>:</td>
-                        <td>2022-07 19 13:06:07</td>
+                        <td>2022-07-19 13:06:07</td>
+                    </tr>
+                    <tr>
+                        <td>End Date</td>
+                        <td>:</td>
+                        <td>2022-07-20 13:06:07</td>
                     </tr>
                     <tr>
                         <td>Status</td>

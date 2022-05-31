@@ -6,7 +6,7 @@ $(document).ready(() => {
         "autoWidth": true,
         "scrollX": true,
         columnDefs: [{
-            targets: 7,
+            targets: 8,
             render: function (data, type, row) {
                 return `
                 <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="${data}">

@@ -77,9 +77,9 @@ Article:
     * table-view cover -> Thumbnails [done]
  
 Transaction:
-    * table-view: description -> Status
-    * table-view: Date -> Start Date
-    * table-view: End Date
+    * table-view: description -> Status [done?]
+    * table-view: Date -> Start Date [done]
+    * table-view: End Date [done]
 
 Membership:
     * Individual: jenis kelamin, tanggal lahir, nama gereja, organisasi, negara
