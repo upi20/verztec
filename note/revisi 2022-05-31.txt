@@ -82,7 +82,8 @@ Transaction:
     * table-view: End Date [done]
 
 Membership:
-    * Individual: jenis kelamin, tanggal lahir, nama gereja, organisasi, negara
+    * Individual: jenis kelamin, tanggal lahir, nama gereja, organisasi, negara[done]
+    * Filter gender, Organization, City, Country, Product[done]
     * Organization:  nama gereja, organisasi, negara
 
 Catatan:

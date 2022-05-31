@@ -8,6 +8,11 @@ $(document).ready(() => {
     });
 
     $('.select2').select2();
+    $('#city').select2({ dropdownParent: $('#myModal') });
+    $('#organization').select2({ dropdownParent: $('#myModal') });
+    $('#country').select2({ dropdownParent: $('#myModal') });
+    $('#chruch').select2({ dropdownParent: $('#myModal') });
+    $('#packet').select2({ dropdownParent: $('#myModal') });
 })
 
 $('.summernote').summernote({
