@@ -84,7 +84,7 @@ Transaction:
 Membership:
     * Individual: jenis kelamin, tanggal lahir, nama gereja, organisasi, negara[done]
     * Filter gender, Organization, City, Country, Product[done]
-    * Organization:  nama gereja, organisasi, negara
+    * Organization:  nama gereja, organisasi, negara[done]
 
 Catatan:
 Author -> dibuat data master

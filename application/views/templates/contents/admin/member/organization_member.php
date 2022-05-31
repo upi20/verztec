@@ -21,10 +21,15 @@
                     <th style="max-width: 40px;">NO</th>
                     <th class="nowrap">Action</th>
                     <th class="nowrap">Name</th>
+                    <th class="nowrap">Date Of Birth</th>
+                    <th class="nowrap">Gender</th>
                     <th class="nowrap">Email</th>
                     <th class="nowrap">Phone Number</th>
+                    <th class="nowrap">Organization</th>
                     <th class="nowrap">City</th>
                     <th class="nowrap">Address</th>
+                    <th class="nowrap">Country</th>
+                    <th class="nowrap">Church Name</th>
                     <th class="nowrap">Since</th>
                     <th class="nowrap">Product</th>
                 </tr>
@@ -44,10 +49,15 @@
                             </button>
                         </td>
                         <td class="nowrap"><?= $d->name ?></td>
+                        <td class="nowrap"><?= $d->date_of_birth ?></td>
+                        <td class="nowrap"><?= $d->gender ?></td>
                         <td class="nowrap"><?= $d->email ?></td>
                         <td class="nowrap"><?= $d->phone ?></td>
+                        <td class="nowrap"><?= $d->organization ?></td>
                         <td class="nowrap"><?= $d->city ?></td>
                         <td class="nowrap"><?= $d->address ?></td>
+                        <td class="nowrap"><?= $d->country ?></td>
+                        <td class="nowrap"><?= $d->church_name ?></td>
                         <td class="nowrap"><?= '2022' . '-' . explode('-', (explode(' ', $d->since)[0]))[1] . ' ' . explode('-', (explode(' ', $d->since)[0]))[2] . ' ' . explode(' ', $d->since)[1] ?></td>
                         <td class="nowrap"><?= $d->packet ?></td>
                     </tr>

@@ -87,11 +87,13 @@
                     <th class="nowrap">Filled</th>
                     <th class="nowrap">Max</th>
                     <th class="nowrap">Difference</th>
-                    <th class="nowrap">Name</th>
+                    <th class="nowrap">Organization Name</th>
                     <th class="nowrap">Email</th>
                     <th class="nowrap">Phone</th>
                     <th class="nowrap">City</th>
                     <th class="nowrap">Address</th>
+                    <th class="nowrap">Country</th>
+                    <th class="nowrap">Church Name</th>
                     <th class="nowrap">Since</th>
                     <th class="nowrap">Product</th>
                 </tr>
@@ -119,6 +121,8 @@
                         <td class="nowrap"><?= $d->phone ?></td>
                         <td class="nowrap"><?= $d->city ?></td>
                         <td class="nowrap"><?= $d->address ?></td>
+                        <td class="nowrap"><?= $d->country ?></td>
+                        <td class="nowrap"><?= $d->church_name ?></td>
                         <td class="nowrap"><?= '2022' . '-' . explode('-', (explode(' ', $d->since)[0]))[1] . ' ' . explode('-', (explode(' ', $d->since)[0]))[2] . ' ' . explode(' ', $d->since)[1] ?></td>
                         <td class="nowrap"><?= $d->packet ?></td>
                     </tr>
@@ -132,7 +136,7 @@
 
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <form id="form" enctype="multipart/form-data">
             <div class="modal-content">
                 <div class="modal-header">
@@ -143,43 +147,60 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="id" id="id">
-
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="chruch">Chruch Name</label>
+                                <input type="text" class="form-control" id="chruch" name="chruch" placeholder="Chruch Name" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="number">Phone Number</label>
+                                <input type="number" class="form-control" id="number" name="number" placeholder="Phone Number" required />
+                            </div>
+                        </div>
+                        <div class="col-md-12"> <label for="address">Address</label>
+                            <textarea id="address" class="summernote"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" name="city" placeholder="City Name" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id="country" name="country" placeholder="Country" required />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="packet">Product</label>
+                                <select class="form-control select2" value="" id="packet" style="width: 100%;">
+                                    <option value="">Select Product</option>
+                                    <option value="">Premium</option>
+                                    <option value="">Silver</option>
+                                    <option value="">Gold</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
-                    </div>
 
-                    <div class="form-group">
-                        <label for="number">Phone Number</label>
-                        <input type="number" class="form-control" id="number" name="number" placeholder="Phone Number" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <input type="text" class="form-control" id="city" name="city" placeholder="Full Name" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <input type="text" class="form-control" id="city" name="city" placeholder="Full Name" required />
-                    </div>
-                    <label for="address">Address</label>
-                    <textarea id="address" class="summernote"></textarea>
-
-                    <div class="form-group">
-                        <label for="packet">Packet</label>
-                        <select class="form-control select2" value="" id="packet" style="width: 100%;">
-                            <option value="">Select Packet</option>
-                            <option value="">Premium</option>
-                            <option value="">Silver</option>
-                            <option value="">Gold</option>
-                        </select>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">
