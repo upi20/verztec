@@ -32,6 +32,8 @@ $(document).ready(() => {
     });
 
     $('.select2').select2();
+    $('#author').select2({ dropdownParent: $('#myModal') });
+    $('#category').select2({ dropdownParent: $('#myModal') });
     $('#source').on('change', function () {
         setResource($(this).val());
     })

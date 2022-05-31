@@ -18,8 +18,10 @@ class Audiobooks extends Render_Controller
         $this->breadcrumb_1_url = '#';
         $this->breadcrumb_2 = 'Resource';
         $this->breadcrumb_2_url = base_url() . 'Audiobooks';
-
         $this->data['dataset'] = json_decode($this->getdataset());
+        $this->data['authors'] = array_unique(array_map(function ($data) {
+            return $data->author;
+        }, $this->data['dataset']));
 
         // Send data to view
         $this->render();

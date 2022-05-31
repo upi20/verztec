@@ -9,72 +9,72 @@
 
 2. Resource
  Ebook:
-    * Saved -> Draft
-    * Takedown -> Unpublish
-    * Author -> dibuat filter
-    * form-view Author menjadi dropdown dan bisa tambah baru
-    * form-view File Thumbnails
-    * form-view Categories
-    * table-view kolom action ada button Review
-    * table-view Subscriber -> Comments
-    * table-view cover -> Thumbnails 
+    * Saved -> Draft [done]
+    * Takedown -> Unpublish [done]
+    * Author -> dibuat filter [done]
+    * form-view Author menjadi dropdown dan bisa tambah baru [author] // informasi tambahan untuk tambah baru nanti akan di tambah di teknis nya
+    * form-view File Thumbnails [done]
+    * form-view Categories [done]
+    * table-view kolom action ada button Review [done]
+    * table-view Subscriber -> Comments [done]
+    * table-view cover -> Thumbnails [done]
  Video:
-    * Author ditambah
-    * Saved -> Draft
-    * Takedown -> Unpublish
-    * Author -> dibuat filter
+    * Author ditambah [done]
+    * Saved -> Draft [done]
+    * Takedown -> Unpublish [done]
+    * Author -> dibuat filter[done]
     * form-view Author menjadi dropdown dan bisa tambah baru
-    * form-view File Thumbnails
-    * form-view Categories
-    * table-view kolom action ada button Review
-    * table-view Subscriber -> Comments
-    * table-view cover -> Thumbnails 
+    * form-view File Thumbnails [done]
+    * form-view Categories [done]
+    * table-view kolom action ada button Review [done]
+    * table-view Subscriber -> Comments [done]
+    * table-view cover -> Thumbnails [done]
  Audiobook:
-    * Saved -> Draft
-    * Takedown -> Unpublish
-    * Author -> dibuat filter
-    * form-view Author menjadi dropdown dan bisa tambah baru
-    * form-view File Thumbnails
-    * form-view Categories
-    * table-view kolom action ada button Review
-    * table-view Subscriber -> Comments
-    * table-view cover -> Thumbnails 
+    * Saved -> Draft [done]
+    * Takedown -> Unpublish [done]
+    * Author -> dibuat filter [done]
+    * form-view Author menjadi dropdown dan bisa tambah baru [done]
+    * form-view File Thumbnails [done]
+    * form-view Categories [done]
+    * table-view kolom action ada button Review [done]
+    * table-view Subscriber -> Comments[done]
+    * table-view cover -> Thumbnails [done]
  Podcast:
-    * Speaker -> diganti jadi Author
-    * Saved -> Draft
-    * Takedown -> Unpublish
-    * Author -> dibuat filter
-    * form-view Author menjadi dropdown dan bisa tambah baru
-    * form-view File Thumbnails
-    * form-view Categories
-    * table-view kolom action ada button Review
-    * table-view Subscriber -> Comments
-    * table-view cover -> Thumbnails
+    * Speaker -> diganti jadi Author[done]
+    * Saved -> Draft[done]
+    * Takedown -> Unpublish[done]
+    * Author -> dibuat filter[done]
+    * form-view Author menjadi dropdown dan bisa tambah baru [done]
+    * form-view File Thumbnails [done]
+    * form-view Categories [done]
+    * table-view kolom action ada button Review [done]
+    * table-view Subscriber -> Comments [done]
+    * table-view cover -> Thumbnails [done]
 Music:
-    * Singer -> diganti jadi Author
-    * Saved -> Draft
-    * Takedown -> Unpublish
-    * Author -> dibuat filter
-    * form-view Author menjadi dropdown dan bisa tambah baru
-    * form-view File Thumbnails
-    * form-view Categories
-    * table-view kolom action ada button Review
-    * table-view Subscriber -> Comments
-    * table-view cover -> Thumbnails 
+    * Singer -> diganti jadi Author [done]
+    * Saved -> Draft [done]
+    * Takedown -> Unpublish [done]
+    * Author -> dibuat filter [done]
+    * form-view Author menjadi dropdown dan bisa tambah baru [done]
+    * form-view File Thumbnails [done]
+    * form-view Categories [done]
+    * table-view kolom action ada button Review [done]
+    * table-view Subscriber -> Comments[done]
+    * table-view cover -> Thumbnails [done]
 Article:
-    * Article Full dihilangkan
-    * Article Trial dihilangkan
-    * Jika Write -> Description
-   Link  -> URL + Description
-    * Saved -> Draft
-    * Takedown -> Unpublish
-    * Author -> dibuat filter
-    * form-view Categories
-    * form-view Author menjadi dropdown dan bisa tambah baru
-    * form-view File Thumbnails
-    * table-view kolom action ada button Review
-    * table-view Subscriber -> Comments
-    * table-view cover -> Thumbnails
+    * Article Full dihilangkan [done]
+    * Article Trial dihilangkan [done]
+    * Jika Write -> Description [done]
+    * Jika Link  -> URL + Description [done]
+    * Saved -> Draft [done]
+    * Takedown -> Unpublish [done]
+    * Author -> dibuat filter [done]
+    * form-view Categories [done]
+    * form-view Author menjadi dropdown dan bisa tambah baru [done]
+    * form-view File Thumbnails [done]
+    * table-view kolom action ada button Review [done]
+    * table-view Subscriber -> Comments [done]
+    * table-view cover -> Thumbnails [done]
  
 Transaction:
     * table-view: description -> Status

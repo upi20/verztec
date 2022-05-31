@@ -6,7 +6,7 @@ $(document).ready(() => {
         "autoWidth": true,
         "scrollX": true,
         columnDefs: [{
-            targets: 4,
+            targets: 5,
             render: function (data, type, row) {
                 return `
                 <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="${data}">
@@ -15,7 +15,7 @@ $(document).ready(() => {
                 `;
             }
         }, {
-            targets: 5,
+            targets: 6,
             render: function (data, type, row) {
                 return secondConverter(data);
             }
@@ -35,6 +35,8 @@ $(document).ready(() => {
     $('#source').on('change', function () {
         setResource($(this).val());
     })
+    $('#author').select2({ dropdownParent: $('#myModal') });
+    $('#category').select2({ dropdownParent: $('#myModal') });
     setResource();
 })
 

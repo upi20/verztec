@@ -7,9 +7,9 @@
                 <div class="form-group  mb-lg-0 ml-lg-2">
                     <select class="form-control select2" style=" min-width:150px" value="" style="width: 100%;">
                         <option value="">Select Status</option>
-                        <option value="">Saved</option>
+                        <option value="">Draft</option>
                         <option value="">Publish</option>
-                        <option value="">Takedown</option>
+                        <option value="">Unpublish</option>
                     </select>
                 </div>
                 <div class="form-group  mb-lg-0 ml-lg-2">
@@ -17,6 +17,14 @@
                         <option value="">Select Soruce</option>
                         <option value="">Hyperlink</option>
                         <option value="">File</option>
+                    </select>
+                </div>
+                <div class="form-group  mb-lg-0 ml-lg-2">
+                    <select class="form-control select2" style=" min-width:150px" value="" style="width: 100%;">
+                        <option value="">Select Author</option>
+                        <?php foreach ($authors as $author) : ?>
+                            <option value="<?= $author ?>"><?= $author ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group  mb-lg-0 ml-lg-2">
@@ -61,7 +69,7 @@
         <div class="info-box">
             <span class="info-box-icon bg-secondary"><i class="fas fa-save"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Saved</span>
+                <span class="info-box-text">Draft</span>
                 <span class="info-box-number">5</span>
             </div>
         </div>
@@ -79,7 +87,7 @@
         <div class="info-box">
             <span class="info-box-icon bg-danger"><i class="fas fa-times"></i></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Takedown</span>
+                <span class="info-box-text">Unpublish</span>
                 <span class="info-box-number">5</span>
             </div>
         </div>
@@ -128,7 +136,7 @@
                     <th class="nowrap">Action</th>
                     <th class="nowrap">Status</th>
                     <th class="nowrap">Title</th>
-                    <th class="nowrap">Speaker</th>
+                    <th class="nowrap">Author</th>
                     <th class="nowrap">Description</th>
                     <th class="nowrap">Duration</th>
                     <th class="nowrap">File Full</th>
@@ -138,22 +146,22 @@
                     <th class="nowrap">Liked</th>
                     <th class="nowrap">Saved</th>
                     <th class="nowrap">View</th>
-                    <th class="nowrap">Subscriber</th>
+                    <th class="nowrap">Comments</th>
                     <th class="nowrap">Tags</th>
-                    <th class="nowrap">Cover</th>
+                    <th class="nowrap">Thumbnails</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($dataset as $d) :
                     switch ($d->status) {
                         case 0:
-                            $status = '<span class="badge bg-info">Saved</span>';
+                            $status = '<span class="badge bg-info">Draft</span>';
                             break;
                         case 1:
                             $status = '<span class="badge bg-success">Publish</span>';
                             break;
                         case 2:
-                            $status = '<span class="badge bg-warning">Takedown</span>';
+                            $status = '<span class="badge bg-warning">Unpublish</span>';
                             break;
 
                         default:
@@ -171,10 +179,13 @@
                             <button class="btn btn-danger btn-xs nowrap my-1" onclick="delete_fun()">
                                 <i class="fas fa-trash"></i> Delete
                             </button>
+                            <button class="btn btn-secondary btn-xs nowrap my-1">
+                                <i class="fas fa-file-alt"></i> Review
+                            </button>
                         </td>
                         <td class="nowrap"><?= $status ?></td>
                         <td class="nowrap"><?= $d->title ?></td>
-                        <td class="nowrap"><?= $d->speaker ?></td>
+                        <td class="nowrap"><?= $d->author ?></td>
                         <td class="nowrap"><?= $d->description ?></td>
                         <td class="nowrap"><?= $d->duration ?></td>
                         <td class="nowrap">
@@ -246,8 +257,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="speaker">Speaker</label>
-                                <input type="text" class="form-control" id="speaker" name="speaker" placeholder="Podcast Speaker" required />
+                                <label for="author">Author</label>
+                                <select class="form-control" value="author" id="author" name="" style="width: 100%;">
+                                    <option value="">Select Author</option>
+                                    <?php foreach ($authors as $author) : ?>
+                                        <option value="<?= $author ?>"><?= $author ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -319,12 +335,29 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label for="category">Category</label>
+                                <select id="category" class="form-control" id="category" value="" style="width: 100%;" aria-placeholder="Select Tag">
+                                    <option value="">Select Category</option>
+                                    <option value="">Religion</option>
+                                    <option value="">Education</option>
+                                    <option value="">Journey</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="thumbnails">File Thumbnails</label>
+                                <input type="file" class="form-control" id="thumbnails" name="thumbnails" placeholder="Thumbnails" required />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label for="status">Status</label>
                                 <select class="form-control" id="status" name="status" required>
                                     <option value="">Select Status</option>
-                                    <option value="">Saved</option>
+                                    <option value="">Draft</option>
                                     <option value="">Publish</option>
-                                    <option value="">Takedown</option>
+                                    <option value="">Unpublish</option>
                                 </select>
                             </div>
                         </div>

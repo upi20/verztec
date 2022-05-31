@@ -19,7 +19,9 @@ class Articles extends Render_Controller
         $this->breadcrumb_2 = 'Resource';
         $this->breadcrumb_2_url = base_url() . 'Articles';
         $this->data['dataset'] = json_decode($this->getdataset());
-
+        $this->data['authors'] = array_unique(array_map(function ($data) {
+            return $data->author;
+        }, $this->data['dataset']));
         // Send data to view
         $this->render();
     }
