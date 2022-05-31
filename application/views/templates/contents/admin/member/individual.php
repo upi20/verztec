@@ -291,9 +291,9 @@
                     <textarea id="address" class="summernote"></textarea>
 
                     <div class="form-group">
-                        <label for="packet">Packet</label>
+                        <label for="packet">Product</label>
                         <select class="form-control select2" value="" id="packet" style="width: 100%;">
-                            <option value="">Select Packet</option>
+                            <option value="">Select Product</option>
                             <option value="">Premium</option>
                             <option value="">Silver</option>
                             <option value="">Gold</option>
