@@ -1,0 +1,93 @@
+1. Dashboard
+ - Konten terbanyak dicari (dari keyword)
+ - Konten terpopuler[done]
+ - Konten paling sedikit dicari [done]
+ - Statistik Kunjungan Web Harian per Bulan[]
+ - Subscription [done]
+   * Trial [done]
+   * Berlangganan [done]
+
+2. Resource
+ Ebook:
+    * Saved -> Draft
+    * Takedown -> Unpublish
+    * Author -> dibuat filter
+    * form-view Author menjadi dropdown dan bisa tambah baru
+    * form-view File Thumbnails
+    * form-view Categories
+    * table-view kolom action ada button Review
+    * table-view Subscriber -> Comments
+    * table-view cover -> Thumbnails 
+ Video:
+    * Author ditambah
+    * Saved -> Draft
+    * Takedown -> Unpublish
+    * Author -> dibuat filter
+    * form-view Author menjadi dropdown dan bisa tambah baru
+    * form-view File Thumbnails
+    * form-view Categories
+    * table-view kolom action ada button Review
+    * table-view Subscriber -> Comments
+    * table-view cover -> Thumbnails 
+ Audiobook:
+    * Saved -> Draft
+    * Takedown -> Unpublish
+    * Author -> dibuat filter
+    * form-view Author menjadi dropdown dan bisa tambah baru
+    * form-view File Thumbnails
+    * form-view Categories
+    * table-view kolom action ada button Review
+    * table-view Subscriber -> Comments
+    * table-view cover -> Thumbnails 
+ Podcast:
+    * Speaker -> diganti jadi Author
+    * Saved -> Draft
+    * Takedown -> Unpublish
+    * Author -> dibuat filter
+    * form-view Author menjadi dropdown dan bisa tambah baru
+    * form-view File Thumbnails
+    * form-view Categories
+    * table-view kolom action ada button Review
+    * table-view Subscriber -> Comments
+    * table-view cover -> Thumbnails
+Music:
+    * Singer -> diganti jadi Author
+    * Saved -> Draft
+    * Takedown -> Unpublish
+    * Author -> dibuat filter
+    * form-view Author menjadi dropdown dan bisa tambah baru
+    * form-view File Thumbnails
+    * form-view Categories
+    * table-view kolom action ada button Review
+    * table-view Subscriber -> Comments
+    * table-view cover -> Thumbnails 
+Article:
+    * Article Full dihilangkan
+    * Article Trial dihilangkan
+    * Jika Write -> Description
+   Link  -> URL + Description
+    * Saved -> Draft
+    * Takedown -> Unpublish
+    * Author -> dibuat filter
+    * form-view Categories
+    * form-view Author menjadi dropdown dan bisa tambah baru
+    * form-view File Thumbnails
+    * table-view kolom action ada button Review
+    * table-view Subscriber -> Comments
+    * table-view cover -> Thumbnails
+ 
+Transaction:
+    * table-view: description -> Status
+    * table-view: Date -> Start Date
+    * table-view: End Date
+
+Membership:
+    * Individual: jenis kelamin, tanggal lahir, nama gereja, organisasi, negara
+    * Organization:  nama gereja, organisasi, negara
+
+Catatan:
+Author -> dibuat data master
+Admin Panel:
+ - Administrator
+ - Author
+ - Financial

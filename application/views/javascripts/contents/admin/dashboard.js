@@ -145,4 +145,78 @@ $(document).ready(() => {
             }
         }
     })
+
+    var $vistorhart = $('#vistor-chart')
+    // eslint-disable-next-line no-unused-vars
+    const addZero = e => (e < 10 ? `0${e}` : e);
+    const labels = [];
+    const datas = [];
+    for (let i = 1; i <= 30; i++) {
+        labels.push(i);
+        const from = 500;
+        const to = 2000;
+        const rand = Math.floor(Math.random(from, to) * to)
+        datas.push(rand);
+    }
+
+
+
+    var vistorhart = new Chart($vistorhart, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    backgroundColor: '#007bff',
+                    borderColor: '#007bff',
+                    data: datas
+                },
+            ]
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                mode: mode,
+                intersect: intersect
+            },
+            hover: {
+                mode: mode,
+                intersect: intersect
+            },
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    // display: false,
+                    gridLines: {
+                        display: true,
+                        lineWidth: '4px',
+                        color: 'rgba(0, 0, 0, .2)',
+                        zeroLineColor: 'transparent'
+                    },
+                    ticks: $.extend({
+                        beginAtZero: true,
+
+                        // Include a dollar sign in the ticks
+                        callback: function (value) {
+                            if (value >= 1000) {
+                                value /= 1000
+                                value += 'k'
+                            }
+
+                            return value
+                        }
+                    }, ticksStyle)
+                }],
+                xAxes: [{
+                    display: true,
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: ticksStyle
+                }]
+            }
+        }
+    })
 })
