@@ -9,7 +9,7 @@
 |
 */
 
-$config['app_name']         = 'AuditAny';
+$config['app_name']         = 'Logle Online';
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ $config['app_name']         = 'AuditAny';
 |
 */
 
-$config['copyright']         = '&copy; 2021 Developed by <b>AuditAny</b>';
+$config['copyright']         = '&copy; 2022 Developed by <b>Logle Online</b>';
 
 /*
 |--------------------------------------------------------------------------

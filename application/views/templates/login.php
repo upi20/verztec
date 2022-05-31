@@ -95,7 +95,7 @@
     </div>
     <!-- /.card -->
   </div>
-  <small class="form-text text-muted">&copy; 2021 Developed by <b>AuditAny</b></small>
+  <small class="form-text text-muted">&copy; 2022 Developed by <b><?php echo $app_name;?></b></small>
   <!-- /.login-box -->
 
   <!-- jQuery -->
